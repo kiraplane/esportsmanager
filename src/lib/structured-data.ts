@@ -1,6 +1,10 @@
 import { websiteConfig } from '@/config/website';
 import type { Locale } from 'next-intl';
-import { getBaseUrl, getImageUrl, getUrlWithLocale } from './urls/urls';
+import {
+  getCanonicalBaseUrl,
+  getCanonicalImageUrl,
+  getCanonicalUrlWithLocale,
+} from './urls/urls';
 
 type StructuredData = Record<string, unknown>;
 
@@ -14,7 +18,7 @@ function getLocaleLanguage(locale: Locale): string {
 }
 
 function getOrganizationId(): string {
-  return `${getBaseUrl()}#organization`;
+  return `${getCanonicalBaseUrl()}#organization`;
 }
 
 function getOrganizationLogo() {
@@ -22,7 +26,7 @@ function getOrganizationLogo() {
   return logo
     ? {
         '@type': 'ImageObject',
-        url: getImageUrl(logo),
+        url: getCanonicalImageUrl(logo),
       }
     : undefined;
 }
@@ -58,7 +62,7 @@ export function buildOrganizationStructuredData({
     '@type': 'Organization',
     '@id': getOrganizationId(),
     name,
-    url: getBaseUrl(),
+    url: getCanonicalBaseUrl(),
     ...(description && { description }),
     ...(logo && { logo }),
     ...(sameAs && { sameAs }),
@@ -74,7 +78,7 @@ export function buildWebsiteStructuredData({
   name: string;
   description?: string;
 }): StructuredData {
-  const url = getUrlWithLocale('', locale);
+  const url = getCanonicalUrlWithLocale('', locale);
 
   return {
     '@type': 'WebSite',
@@ -107,7 +111,7 @@ export function buildSoftwareApplicationStructuredData({
   image?: string;
 }): StructuredData {
   const logo = getOrganizationLogo();
-  const url = getUrlWithLocale(pathname, locale);
+  const url = getCanonicalUrlWithLocale(pathname, locale);
 
   return {
     '@type': 'SoftwareApplication',
@@ -118,7 +122,7 @@ export function buildSoftwareApplicationStructuredData({
     applicationCategory,
     operatingSystem: 'Web',
     inLanguage: getLocaleLanguage(locale),
-    ...(image && { image: getImageUrl(image) }),
+    ...(image && { image: getCanonicalImageUrl(image) }),
     offers: {
       '@type': 'Offer',
       price: 0,
@@ -130,7 +134,7 @@ export function buildSoftwareApplicationStructuredData({
     publisher: {
       '@type': 'Organization',
       name: organizationName,
-      url: getBaseUrl(),
+      url: getCanonicalBaseUrl(),
       ...(logo && { logo }),
     },
   };
@@ -145,7 +149,7 @@ export function buildFaqPageStructuredData({
   pathname: string;
   faqs: FaqStructuredDataItem[];
 }): StructuredData {
-  const url = getUrlWithLocale(pathname, locale);
+  const url = getCanonicalUrlWithLocale(pathname, locale);
 
   return {
     '@type': 'FAQPage',

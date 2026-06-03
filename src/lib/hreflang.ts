@@ -2,7 +2,7 @@ import { websiteConfig } from '@/config/website';
 import { getLocalePathname } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
 import type { Locale } from 'next-intl';
-import { getBaseUrl } from './urls/urls';
+import { getCanonicalBaseUrl } from './urls/urls';
 
 type Href = Parameters<typeof getLocalePathname>[0]['href'];
 
@@ -28,7 +28,7 @@ export function generateHreflangUrls(href: Href): Record<string, string> {
   // Generate URLs for each supported locale
   routing.locales.forEach((locale) => {
     const pathname = getLocalePathname({ locale, href });
-    const fullUrl = getBaseUrl() + pathname;
+    const fullUrl = getCanonicalBaseUrl() + pathname;
     const hreflangValue = getHreflangValue(locale);
 
     hreflangUrls[hreflangValue] = fullUrl;
@@ -39,7 +39,7 @@ export function generateHreflangUrls(href: Href): Record<string, string> {
     locale: routing.defaultLocale,
     href,
   });
-  const defaultUrl = getBaseUrl() + defaultPathname;
+  const defaultUrl = getCanonicalBaseUrl() + defaultPathname;
   hreflangUrls['x-default'] = defaultUrl;
 
   return hreflangUrls;

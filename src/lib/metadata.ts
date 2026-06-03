@@ -4,7 +4,11 @@ import { routing } from '@/i18n/routing';
 import type { Metadata } from 'next';
 import type { Locale } from 'next-intl';
 import { generateAlternates, getCurrentHreflang } from './hreflang';
-import { getBaseUrl, getImageUrl, getUrlWithLocale } from './urls/urls';
+import {
+  getCanonicalBaseUrl,
+  getCanonicalImageUrl,
+  getCanonicalUrlWithLocale,
+} from './urls/urls';
 
 /**
  * Construct the metadata object for the current page (in docs/guides)
@@ -27,11 +31,11 @@ export function constructMetadata({
   title = title || defaultMessages.Metadata.title;
   description = description || defaultMessages.Metadata.description;
   image = image || websiteConfig.metadata.images?.ogImage;
-  const ogImageUrl = getImageUrl(image || '');
+  const ogImageUrl = getCanonicalImageUrl(image || '');
 
   // Generate canonical URL from pathname and locale
   const canonicalUrl = locale
-    ? getUrlWithLocale(pathname || '', locale).replace(/\/$/, '')
+    ? getCanonicalUrlWithLocale(pathname || '', locale).replace(/\/$/, '')
     : undefined;
 
   // Generate hreflang alternates if pathname is provided and we have multiple locales
@@ -63,7 +67,7 @@ export function constructMetadata({
       title,
       description,
       images: [ogImageUrl.toString()],
-      site: getBaseUrl(),
+      site: getCanonicalBaseUrl(),
     },
     icons: {
       icon: [
@@ -74,8 +78,8 @@ export function constructMetadata({
       shortcut: '/favicon.ico',
       apple: '/apple-touch-icon.png',
     },
-    metadataBase: new URL(getBaseUrl()),
-    manifest: `${getBaseUrl()}/manifest.webmanifest`,
+    metadataBase: new URL(getCanonicalBaseUrl()),
+    manifest: `${getCanonicalBaseUrl()}/manifest.webmanifest`,
     ...(noIndex && {
       robots: {
         index: false,

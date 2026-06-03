@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { getBaseUrl } from '../lib/urls/urls';
+import { getCanonicalBaseUrl } from '../lib/urls/urls';
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -14,6 +14,6 @@ export default function robots(): MetadataRoute.Robots {
         '/auth/*',
       ],
     },
-    sitemap: `${getBaseUrl()}/sitemap.xml`,
+    sitemap: `${getCanonicalBaseUrl()}/sitemap.xml`,
   };
 }

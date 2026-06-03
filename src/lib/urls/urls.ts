@@ -1,7 +1,7 @@
 import { routing } from '@/i18n/routing';
 import type { Locale } from 'next-intl';
 
-const baseUrl = 'https://www.ducksurvival.wiki';
+export const CANONICAL_BASE_URL = 'https://www.ducksurvival.wiki';
 
 function cleanBaseUrl(url: string) {
   return url.replace(/\/$/, '');
@@ -9,6 +9,36 @@ function cleanBaseUrl(url: string) {
 
 function isLocalBaseUrl(url?: string) {
   return !url || /localhost|127\.0\.0\.1|0\.0\.0\.0/.test(url);
+}
+
+function getDuckSurvivalBaseUrl(url?: string) {
+  if (!url || isLocalBaseUrl(url)) {
+    return undefined;
+  }
+
+  try {
+    const parsedUrl = new URL(url);
+    if (
+      parsedUrl.hostname === 'ducksurvival.wiki' ||
+      parsedUrl.hostname === 'www.ducksurvival.wiki'
+    ) {
+      parsedUrl.protocol = 'https:';
+      parsedUrl.hostname = 'www.ducksurvival.wiki';
+      parsedUrl.port = '';
+      parsedUrl.pathname = '';
+      parsedUrl.search = '';
+      parsedUrl.hash = '';
+      return cleanBaseUrl(parsedUrl.toString());
+    }
+  } catch {
+    return undefined;
+  }
+
+  return undefined;
+}
+
+export function getCanonicalBaseUrl(): string {
+  return CANONICAL_BASE_URL;
 }
 
 /**
@@ -28,12 +58,13 @@ export function getBaseUrl(): string {
   const configuredBaseUrl =
     process.env.NEXT_PUBLIC_BASE_URL || process.env.BETTER_AUTH_URL;
 
-  // In production, never let a local .env value leak into canonical URLs.
-  if (!isLocalBaseUrl(configuredBaseUrl) && configuredBaseUrl) {
-    return cleanBaseUrl(configuredBaseUrl);
+  // In production, never let a local or old-project .env value leak into URLs.
+  const duckSurvivalBaseUrl = getDuckSurvivalBaseUrl(configuredBaseUrl);
+  if (duckSurvivalBaseUrl) {
+    return duckSurvivalBaseUrl;
   }
 
-  return cleanBaseUrl(baseUrl);
+  return getCanonicalBaseUrl();
 }
 
 /**
@@ -50,6 +81,15 @@ export function getUrlWithLocale(url: string, locale?: Locale | null): string {
   return shouldAppendLocale(locale)
     ? `${getBaseUrl()}/${locale}${url}`
     : `${getBaseUrl()}${url}`;
+}
+
+export function getCanonicalUrlWithLocale(
+  url: string,
+  locale?: Locale | null
+): string {
+  return shouldAppendLocale(locale)
+    ? `${getCanonicalBaseUrl()}/${locale}${url}`
+    : `${getCanonicalBaseUrl()}${url}`;
 }
 
 /**
@@ -116,6 +156,16 @@ export function getImageUrl(image: string): string {
     return `${getBaseUrl()}${image}`;
   }
   return `${getBaseUrl()}/${image}`;
+}
+
+export function getCanonicalImageUrl(image: string): string {
+  if (image.startsWith('http://') || image.startsWith('https://')) {
+    return image;
+  }
+  if (image.startsWith('/')) {
+    return `${getCanonicalBaseUrl()}${image}`;
+  }
+  return `${getCanonicalBaseUrl()}/${image}`;
 }
 
 /**

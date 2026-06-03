@@ -7,9 +7,7 @@ import { getBaseUrl } from './urls/urls';
  * https://www.better-auth.com/docs/installation#create-client-instance
  */
 const authClientBaseURL =
-  typeof window !== 'undefined'
-    ? window.location.origin
-    : process.env.NEXT_PUBLIC_BASE_URL || getBaseUrl();
+  typeof window !== 'undefined' ? window.location.origin : getBaseUrl();
 
 export const authClient = createAuthClient({
   baseURL: authClientBaseURL,

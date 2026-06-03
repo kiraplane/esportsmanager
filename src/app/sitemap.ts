@@ -3,7 +3,7 @@ import { guides } from '@/data/clashofcritters/guides';
 import { Routes } from '@/routes';
 import type { MetadataRoute } from 'next';
 import { routing } from '../i18n/routing';
-import { getBaseUrl } from '../lib/urls/urls';
+import { getCanonicalBaseUrl } from '../lib/urls/urls';
 
 const coreRoutes = [
   Routes.Root,
@@ -26,7 +26,7 @@ const stableLastModified = new Date('2026-06-03T00:00:00.000Z');
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const sitemapList: MetadataRoute.Sitemap = [];
-  const baseUrl = getBaseUrl();
+  const baseUrl = getCanonicalBaseUrl();
 
   routing.locales.forEach((locale) => {
     [...coreRoutes, ...guideRoutes, ...heroRoutes].forEach((route) => {
