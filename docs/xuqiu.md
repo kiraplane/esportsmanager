@@ -1,23 +1,45 @@
-基于当前这个项目的代码框架背后的模版，做一个新项目，是
-Game of Thrones Dragonfire这个游戏的攻略站。我希望满足用户的攻略相关的需求。网站的名称就叫
-Game of Thrones Dragonfire Wiki
-本项目网站的网址为：www.gameofthronesdragonfire.wiki
+# The False Sun Wiki 需求 brief
 
-1.请搜索下这个游戏，基于这个游戏的长尾搜索词，看下我们应该如何做网站内容
+游戏词：The False Sun
 
-2.之前有个成熟的攻略站项目，也可以学习其优秀的点，主要是其guide文章和youtube的结合方式。
-/Users/he/Documents/AI/vibe coding/kingshot/kingshotguide
+站点名称：The False Sun Wiki
 
-4.官方手游商店：https://play.google.com/store/apps/details?id=com.wb.goog.hotd.socialstrategy&hl=en_US
-基于这个游戏的风格，给网站确定个配色。
+目标域名：https://www.thefalsesun.wiki
 
-5.如果需要数据和icon，可以从这几个网站获取：但是要确保是游戏相关的内容
-https://gameofthrones.fandom.com/wiki/Game_of_Thrones:_Dragonfire
-https://gotdragonfire.com/gameplay/
+站型判断：轻量 walkthrough / all endings guide 站，不做传统 wiki。
 
-如果某些需求搜索词，没有数据支持，可以搜索youtube视频，将视频翻译成中文，并写成文章即可
+## 核心内容
 
-6.可以学习的竞品：综合考虑
-① 本项目原有的框架
-② https://www.illusionconnectre.wiki/ 这个网页的on page seo方法
-③ UI布局，按钮方式如：https://pokopiaguide.com/
+- `/all-endings`：20 个结局追踪与路线清理。
+- `/ending-20`：Ending 20 / chicken accident / rare farm route。
+- `/silas-route`：Silas route 选择、存档点、结局分支。
+- `/kyle-route`：Kyle 相关 aftermath route。
+- `/mini-games`：农场小游戏、chicken retry、跳过诉求的安全处理。
+- `/download`：官方 itch.io 下载，Android/Mac/Windows/Linux，避免 APK。
+- `/content-warnings`：成熟内容、暴力/惊悚、闪烁/音效警告。
+
+## 官方来源
+
+- Official itch.io: https://oniray.itch.io/the-false-sun
+- Creator: Oniray
+- Genre: Visual Novel
+- Platforms observed on 2026-06-08: Windows, macOS, Linux, Android
+
+## 搜索与内容规则
+
+- 先覆盖 `the false sun all endings`、`the false sun ending 20`、`the false sun walkthrough`。
+- 游戏不适合 codes、tier list、hero database、角色百科堆页面。
+- YouTube / transcript 只能做交叉验证素材，正文必须手写，不能转写/洗稿。
+- 不写露骨成人内容，不提供 APK、mod、cheat、script、unsafe download。
+- SERP 会混入 R. Scott Bakker 小说、webcomic、其他游戏关键词，需明确过滤。
+
+## 视频交叉验证
+
+- PVpgRF8nC1M：all endings walkthrough source clue。
+- 9iG-Ho_Uas8：all endings / Ending 20 source clue。
+
+## UI 方向
+
+- 信息密度高、玩家决策优先。
+- 视觉贴近 mature VN / farm horror / false sun 氛围。
+- 颜色不套旧模板，不做大 wiki 数据库导航。

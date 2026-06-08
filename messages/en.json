@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "name": "Game of Thrones Dragonfire Wiki",
-    "title": "Game of Thrones Dragonfire Wiki - Codes, Tier List and Guides",
-    "description": "Game of Thrones Dragonfire Wiki for codes, dragon tier lists, campaign reset help, resources, alliances, Reigns, and beginner guides."
+    "name": "The False Sun",
+    "title": "The False Sun - Walkthrough, All Endings and Route Guide",
+    "description": "The False Sun guide for all endings, Ending 20, Silas route, Kyle route, mini-games, safe downloads, and mature-content warnings."
   },
   "Common": {
     "premium": "Premium",
@@ -54,8 +54,8 @@
   },
   "PricingPage": {
     "title": "Pricing",
-    "description": "Optional supporter plans for keeping Game of Thrones Dragonfire Wiki maintained",
-    "subtitle": "Simple support options for readers who want to help maintain guides and data updates",
+    "description": "Optional supporter plans for keeping The False Sun maintained",
+    "subtitle": "Simple support options for readers who want to help maintain spoiler-safe walkthrough updates",
     "monthly": "Monthly",
     "yearly": "Yearly",
     "payAsYouGo": "Pay as you go",
@@ -80,30 +80,30 @@
   "PricePlans": {
     "free": {
       "name": "Free",
-      "description": "Browse Game of Thrones Dragonfire Wiki with no payment required",
+      "description": "Browse The False Sun with no payment required",
       "features": {
-        "feature-1": "Dragonfire code status and redemption notes",
-        "feature-2": "Dragon tier list and upgrade priority guidance",
-        "feature-3": "Guides for campaigns, resources, alliances, and Reigns",
-        "feature-4": "Core pages updated as game information changes"
+        "feature-1": "All endings and route-cleanup guidance",
+        "feature-2": "Ending 20 and mini-game retry notes",
+        "feature-3": "Silas and Kyle route pages",
+        "feature-4": "Download and content-warning pages updated as sources change"
       },
       "limits": {
-        "limit-1": "Supporter features may be added later",
-        "limit-2": "Some data can change after game updates",
-        "limit-3": "Guide updates depend on available sources",
-        "limit-4": "Community feedback helps improve coverage"
+        "limit-1": "Some route details still need direct replay verification",
+        "limit-2": "Guide updates depend on available sources",
+        "limit-3": "Community feedback helps improve coverage",
+        "limit-4": "This site is not affiliated with the creator"
       }
     },
     "pro": {
       "name": "Supporter",
-      "description": "For readers who want to support ongoing guide updates",
+      "description": "For readers who want to support ongoing walkthrough updates",
       "features": {
         "feature-1": "Support site maintenance",
-        "feature-2": "Help fund future Dragonfire data checks",
-        "feature-3": "Keep gift code and guide pages fresh",
+        "feature-2": "Help fund future route checks",
+        "feature-3": "Keep ending and mini-game pages fresh",
         "feature-4": "Support cleaner walkthrough coverage",
         "feature-5": "Help improve page speed and hosting stability",
-        "feature-6": "Support future tool experiments",
+        "feature-6": "Support future guide experiments",
         "feature-7": "No gameplay advantage is sold",
         "feature-8": "No official affiliation claimed",
         "feature-9": "Reader-first site improvements",
@@ -113,11 +113,11 @@
     },
     "max": {
       "name": "Backer",
-      "description": "For heavier support of Game of Thrones Dragonfire Wiki maintenance",
+      "description": "For heavier support of The False Sun maintenance",
       "features": {
         "feature-1": "Support expanded guide coverage",
         "feature-2": "Help fund more frequent source reviews",
-        "feature-3": "Support long-form strategy pages",
+        "feature-3": "Support long-form walkthrough pages",
         "feature-4": "Keep hosting and tooling stable",
         "feature-5": "Back future wiki improvements",
         "feature-6": "Useful for teams maintaining community resources",
@@ -290,51 +290,47 @@
       "home": {
         "title": "Home"
       },
-      "codes": {
-        "title": "Codes"
+      "allEndings": {
+        "title": "All Endings"
       },
-      "tierList": {
-        "title": "Tier List"
+      "ending20": {
+        "title": "Ending 20"
       },
-      "dragons": {
-        "title": "Dragons"
+      "silasRoute": {
+        "title": "Silas Route"
       },
-      "resources": {
-        "title": "Resources"
-      },
-      "campaigns": {
-        "title": "Campaigns"
+      "miniGames": {
+        "title": "Mini-Games"
       },
       "guides": {
         "title": "Guides"
       },
-      "alliances": {
-        "title": "Alliances"
-      },
       "download": {
         "title": "Download"
+      },
+      "contentWarnings": {
+        "title": "Warnings"
       }
     },
     "footer": {
-      "tagline": "An unofficial Game of Thrones Dragonfire Wiki for codes, dragon tiers, campaigns, resources, alliances, Reigns, and beginner progression.",
-      "wiki": {
-        "title": "Wiki",
+      "tagline": "An unofficial walkthrough guide for The False Sun endings, Ending 20, Silas and Kyle routes, mini-games, downloads, and spoiler-safe warnings.",
+      "walkthrough": {
+        "title": "Walkthrough",
         "items": {
-          "codes": "Codes",
-          "tierList": "Tier List",
-          "dragons": "Dragons",
-          "resources": "Resources",
-          "campaigns": "Campaigns"
+          "allEndings": "All Endings",
+          "ending20": "Ending 20",
+          "silasRoute": "Silas Route",
+          "kyleRoute": "Kyle Route",
+          "miniGames": "Mini-Games"
         }
       },
       "guides": {
         "title": "Guides",
         "items": {
-          "all": "All guides",
-          "beginner": "Beginner Guide",
-          "tierList": "Tier List Guide",
-          "resources": "Resource Guide",
-          "alliances": "Alliance Guide"
+          "all": "All Guides",
+          "download": "Download Guide",
+          "contentWarnings": "Content Warnings",
+          "disclaimer": "Disclaimer"
         }
       },
       "legal": {

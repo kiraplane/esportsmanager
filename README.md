@@ -1,15 +1,15 @@
-# Game of Thrones Dragonfire Wiki
+# The False Sun Wiki
 
-Unofficial fan-made guide site for Game of Thrones: Dragonfire.
+Unofficial fan-made walkthrough site for Oniray's visual novel The False Sun.
 
 The site is built on the existing Next.js / MkSaaS stack and focuses on:
 
-- Dragon tier list and dragon profiles
-- Codes status and safe redemption notes
-- Beginner progression guides
-- Campaign and Reign reset planning
-- Resources, Stronghold, Factions, and Alliances
-- Official download and source links
+- All endings and gallery cleanup
+- Ending 20 / rare chicken accident route notes
+- Silas route and Kyle route walkthroughs
+- Farm mini-games and save-point advice
+- Official itch.io download guidance
+- Mature-content and spoiler warnings
 
 ## Development
 
@@ -23,13 +23,14 @@ pnpm build
 The production domain is:
 
 ```txt
-https://www.gameofthronesdragonfire.wiki
+https://www.thefalsesun.wiki
 ```
 
 ## Content Rules
 
-- Do not publish unverified redeem codes as active.
-- Mark unconfirmed dragon data as `Data Pending`.
-- Prefer official sources, in-game verification, and clearly attributed source notes.
-- Keep the site clearly labeled as an unofficial fan-made guide.
-- Do not reintroduce historical project names or content from earlier wiki builds.
+- Do not turn this into a generic codes, tier-list, or database wiki.
+- Do not publish explicit adult scene walkthroughs or copied game script.
+- Treat route labels as unofficial until direct replay verification confirms them.
+- Prefer official itch.io information and clearly labeled community/video cross-checks.
+- Do not recommend unsafe APKs, modified clients, cheats, or script workarounds.
+- Keep the site clearly labeled as an unofficial fan-made walkthrough.

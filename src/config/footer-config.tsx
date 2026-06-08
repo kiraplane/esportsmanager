@@ -9,31 +9,31 @@ export function useFooterLinks(): NestedMenuItem[] {
 
   return [
     {
-      title: t('wiki.title'),
+      title: t('walkthrough.title'),
       items: [
         {
-          title: t('wiki.items.codes'),
-          href: Routes.Codes,
+          title: t('walkthrough.items.allEndings'),
+          href: Routes.AllEndings,
           external: false,
         },
         {
-          title: t('wiki.items.tierList'),
-          href: Routes.TierList,
+          title: t('walkthrough.items.ending20'),
+          href: Routes.Ending20,
           external: false,
         },
         {
-          title: t('wiki.items.dragons'),
-          href: Routes.Dragons,
+          title: t('walkthrough.items.silasRoute'),
+          href: Routes.SilasRoute,
           external: false,
         },
         {
-          title: t('wiki.items.resources'),
-          href: Routes.Resources,
+          title: t('walkthrough.items.kyleRoute'),
+          href: Routes.KyleRoute,
           external: false,
         },
         {
-          title: t('wiki.items.campaigns'),
-          href: Routes.Campaigns,
+          title: t('walkthrough.items.miniGames'),
+          href: Routes.MiniGames,
           external: false,
         },
       ],
@@ -47,23 +47,18 @@ export function useFooterLinks(): NestedMenuItem[] {
           external: false,
         },
         {
-          title: t('guides.items.beginner'),
-          href: Routes.BeginnerGuide,
+          title: t('guides.items.download'),
+          href: Routes.Download,
           external: false,
         },
         {
-          title: t('guides.items.tierList'),
-          href: Routes.TierListGuide,
+          title: t('guides.items.contentWarnings'),
+          href: Routes.ContentWarnings,
           external: false,
         },
         {
-          title: t('guides.items.resources'),
-          href: Routes.ResourceGuide,
-          external: false,
-        },
-        {
-          title: t('guides.items.alliances'),
-          href: Routes.AllianceGuide,
+          title: t('guides.items.disclaimer'),
+          href: Routes.Disclaimer,
           external: false,
         },
       ],

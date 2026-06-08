@@ -35,6 +35,6 @@ export default function VerifyEmail({
 VerifyEmail.PreviewProps = {
   locale: routing.defaultLocale,
   messages: defaultMessages,
-  url: 'https://www.gameofthronesdragonfire.wiki',
+  url: 'https://www.thefalsesun.wiki',
   name: 'username',
 };

@@ -35,11 +35,18 @@ const retiredPublicRouteRedirects: Array<{
   { pattern: /^\/docs(?:\/.*)?$/, target: '/' },
   { pattern: /^\/about\/?$/, target: '/' },
   { pattern: /^\/contact\/?$/, target: '/' },
-  { pattern: /^\/heroes(?:\/.*)?$/, target: '/dragons' },
-  { pattern: /^\/units-database\/?$/, target: '/dragons' },
-  { pattern: /^\/traits-guide\/?$/, target: '/resources' },
-  { pattern: /^\/skills\/?$/, target: '/resources' },
-  { pattern: /^\/codes-list\/?$/, target: '/codes' },
+  { pattern: /^\/auth(?:\/.*)?$/, target: '/' },
+  { pattern: /^\/dashboard(?:\/.*)?$/, target: '/' },
+  { pattern: /^\/admin(?:\/.*)?$/, target: '/' },
+  { pattern: /^\/settings(?:\/.*)?$/, target: '/' },
+  { pattern: /^\/payment(?:\/.*)?$/, target: '/' },
+  { pattern: /^\/codes(?:\/.*)?$/, target: '/' },
+  { pattern: /^\/tier-list(?:\/.*)?$/, target: '/all-endings' },
+  { pattern: /^\/dragons(?:\/.*)?$/, target: '/all-endings' },
+  { pattern: /^\/resources(?:\/.*)?$/, target: '/mini-games' },
+  { pattern: /^\/campaigns(?:\/.*)?$/, target: '/all-endings' },
+  { pattern: /^\/alliances(?:\/.*)?$/, target: '/' },
+  { pattern: /^\/updates(?:\/.*)?$/, target: '/guides' },
 ];
 
 export default async function middleware(req: NextRequest) {
@@ -47,11 +54,8 @@ export default async function middleware(req: NextRequest) {
   const hostHeader = req.headers.get('host');
   const hostname = hostHeader?.split(':')[0].toLowerCase();
   const forwardedProto = req.headers.get('x-forwarded-proto');
-  const productionHosts = new Set([
-    'gameofthronesdragonfire.wiki',
-    'www.gameofthronesdragonfire.wiki',
-  ]);
-  const canonicalHost = 'www.gameofthronesdragonfire.wiki';
+  const productionHosts = new Set(['thefalsesun.wiki', 'www.thefalsesun.wiki']);
+  const canonicalHost = 'www.thefalsesun.wiki';
 
   if (
     hostname &&

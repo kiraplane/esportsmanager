@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Game of Thrones Dragonfire Wiki - dark, data-dense guide theme */
+/* The False Sun - mature visual-novel walkthrough theme */
 
 :root {
   --font-noto-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -264,46 +264,46 @@
 }
 
 :root {
-  --background: #070302;
-  --foreground: #fff2e0;
-  --card: #150905;
-  --card-foreground: #fff2e0;
-  --popover: #150905;
-  --popover-foreground: #fff2e0;
+  --background: #0a0f0c;
+  --foreground: #f7e8c9;
+  --card: #111612;
+  --card-foreground: #f7e8c9;
+  --popover: #111612;
+  --popover-foreground: #f7e8c9;
 
-  --primary: #c2410c;
-  --primary-foreground: #fff2e0;
+  --primary: #d9b56a;
+  --primary-foreground: #15110b;
 
-  --secondary: #f59e0b;
-  --secondary-foreground: #150905;
+  --secondary: #6ea69a;
+  --secondary-foreground: #0a0f0c;
 
-  --muted: #1f120c;
-  --muted-foreground: #c6b19f;
+  --muted: #141916;
+  --muted-foreground: #c7baa7;
 
-  --accent: #3b1609;
-  --accent-foreground: #fff2e0;
+  --accent: #201418;
+  --accent-foreground: #f7e8c9;
 
-  --destructive: #dc2626;
+  --destructive: #b5444f;
   --destructive-foreground: #fff2e0;
 
-  --border: #4b2417;
-  --input: #4b2417;
-  --ring: #f97316;
+  --border: #493a34;
+  --input: #493a34;
+  --ring: #d9b56a;
 
-  --chart-1: #f97316;
-  --chart-2: #f59e0b;
-  --chart-3: #dc2626;
-  --chart-4: #7c2d12;
-  --chart-5: #fde68a;
+  --chart-1: #d9b56a;
+  --chart-2: #6ea69a;
+  --chart-3: #b5444f;
+  --chart-4: #7b2635;
+  --chart-5: #f7e8c9;
 
-  --sidebar: #070302;
-  --sidebar-foreground: #fff2e0;
-  --sidebar-primary: #c2410c;
-  --sidebar-primary-foreground: #fff2e0;
-  --sidebar-accent: #1f120c;
-  --sidebar-accent-foreground: #fff2e0;
-  --sidebar-border: #4b2417;
-  --sidebar-ring: #f97316;
+  --sidebar: #0a0f0c;
+  --sidebar-foreground: #f7e8c9;
+  --sidebar-primary: #d9b56a;
+  --sidebar-primary-foreground: #15110b;
+  --sidebar-accent: #141916;
+  --sidebar-accent-foreground: #f7e8c9;
+  --sidebar-border: #493a34;
+  --sidebar-ring: #d9b56a;
   --font-sans: var(--font-noto-sans);
   --font-serif: var(--font-noto-serif);
   --font-mono: var(--font-noto-sans-mono);
@@ -389,11 +389,11 @@ body {
 }
 
 /*
- * Game of Thrones Dragonfire theme colors
+ * The False Sun theme colors
  */
 .theme-default {
-  --primary: #c2410c;
-  --primary-foreground: #fff2e0;
+  --primary: #d9b56a;
+  --primary-foreground: #15110b;
 }
 
 .theme-blue {

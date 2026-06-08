@@ -17,7 +17,7 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
   return (
     <footer
       className={cn(
-        'border-[#3A2721] border-t bg-[#080707] text-[#F7EFE3]',
+        'border-[#493A34] border-t bg-[#0A0F0C] text-[#F7E8C9]',
         className
       )}
     >
@@ -48,7 +48,7 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={link.title}
-                      className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#3A2721] text-[#B8A99A] hover:border-[#D6A03D] hover:bg-[#211714] hover:text-[#F7EFE3]"
+                      className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#493A34] text-[#C7BAA7] hover:border-[#D9B56A] hover:bg-[#182019] hover:text-[#F7E8C9]"
                     >
                       <span className="sr-only">{link.title}</span>
                       {link.icon ? link.icon : null}
@@ -123,7 +123,7 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
         </div>
       </Container>
 
-      <div className="border-[#3A2721] border-t py-8">
+      <div className="border-[#493A34] border-t py-8">
         <Container className="px-4 flex items-center justify-between gap-x-4">
           <span className="text-muted-foreground text-sm">
             &copy; {new Date().getFullYear()} {t('Metadata.name')} All Rights
@@ -131,8 +131,7 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
           </span>
 
           <span className="text-muted-foreground text-sm">
-            Unofficial fan wiki. Not affiliated with Warner Bros. Games, HBO, or
-            the official Game of Thrones: Dragonfire team.
+            Unofficial fan walkthrough. Not affiliated with Oniray or itch.io.
           </span>
         </Container>
       </div>

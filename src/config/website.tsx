@@ -20,9 +20,10 @@ export const websiteConfig: WebsiteConfig = {
   },
   metadata: {
     images: {
-      ogImage: '/dragonfire/og-image.png',
-      logoLight: '/dragonfire/logo.png',
-      logoDark: '/dragonfire/logo.png',
+      ogImage:
+        'https://img.itch.zone/aW1nLzI3NTUxNjgxLmpwZw==/original/96%2Fy%2FZ.jpg',
+      logoLight: '/logo.png',
+      logoDark: '/logo.png',
     },
     social: {
       github: '',
@@ -75,9 +76,8 @@ export const websiteConfig: WebsiteConfig = {
   },
   mail: {
     provider: 'resend',
-    fromEmail:
-      'Game of Thrones Dragonfire Wiki <hello@gameofthronesdragonfire.wiki>',
-    supportEmail: 'hello@gameofthronesdragonfire.wiki',
+    fromEmail: 'The False Sun <hello@thefalsesun.wiki>',
+    supportEmail: 'hello@thefalsesun.wiki',
   },
   newsletter: {
     enable: false,

@@ -10,9 +10,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return constructMetadata({
-    title: 'Terms of Service | Game of Thrones Dragonfire Wiki',
+    title: 'Terms of Service | The False Sun',
     description:
-      'Terms for using the unofficial Game of Thrones Dragonfire Wiki and guide site.',
+      'Terms for using The False Sun, an unofficial walkthrough site.',
     locale,
     pathname: '/terms',
   });
@@ -20,28 +20,26 @@ export async function generateMetadata({
 
 export default function TermsOfServicePage() {
   return (
-    <div className="bg-[#0F1117] py-12 text-[#F8FAFC]">
+    <div className="bg-[#0A0F0C] py-12 text-[#F7E8C9]">
       <Container className="max-w-3xl space-y-6 px-4">
         <h1 className="font-display text-4xl font-black">Terms of Service</h1>
-        <p className="leading-8 text-[#CBD5E1]">
-          This site provides unofficial Game of Thrones Dragonfire guides, data
-          notes, and strategy content. It is not affiliated with, endorsed by,
-          sponsored by, or operated by Warner Bros. Games, HBO, Warner Bros.
-          Discovery, or the official Game of Thrones: Dragonfire team.
+        <p className="leading-8 text-[#C7BAA7]">
+          This site provides unofficial walkthroughs for The False Sun, route
+          notes, ending trackers, and download guidance. It is not affiliated
+          with, endorsed by, sponsored by, or operated by Oniray or itch.io.
         </p>
-        <p className="leading-8 text-[#CBD5E1]">
-          Game data can change quickly. Codes, rankings, dragon profiles,
-          campaign reset notes, and stage advice should be treated as guidance,
-          not official instructions.
+        <p className="leading-8 text-[#C7BAA7]">
+          Route details can change after updates or after direct replay
+          verification. Ending labels and confidence notes should be treated as
+          guidance, not official instructions.
         </p>
-        <p className="leading-8 text-[#CBD5E1]">
-          Do not use this site to distribute cheats, automation scripts, copied
-          clients, account services, or other content that violates game or
-          platform terms.
+        <p className="leading-8 text-[#C7BAA7]">
+          Do not use this site to distribute copied game files, unsafe APKs,
+          modified clients, automation scripts, explicit adult content, or
+          copied game script.
         </p>
-        <p className="leading-8 text-[#CBD5E1]">
-          Questions about these terms can be sent to
-          hello@gameofthronesdragonfire.wiki.
+        <p className="leading-8 text-[#C7BAA7]">
+          Questions about these terms can be sent to hello@thefalsesun.wiki.
         </p>
       </Container>
     </div>

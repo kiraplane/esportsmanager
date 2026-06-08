@@ -1,4 +1,4 @@
-import { DragonfireHomePage } from '@/components/dragonfire/home-page';
+import { FalseSunHomePage } from '@/components/falsesun/home-page';
 import { constructMetadata } from '@/lib/metadata';
 import type { Metadata } from 'next';
 import type { Locale } from 'next-intl';
@@ -11,15 +11,16 @@ export async function generateMetadata({
   const { locale } = await params;
 
   return constructMetadata({
-    title: 'Game of Thrones Dragonfire Wiki - Codes, Tier List & Guides',
+    title: 'The False Sun - Walkthrough, All Endings & Route Guide',
     description:
-      'Game of Thrones Dragonfire Wiki with codes, tier list rankings, dragon profiles, campaign reset help, resources, alliances, Reigns, and beginner guides.',
+      'The False Sun guide with all endings, Ending 20, Silas route, Kyle route, mini-games, official download help, and mature-content warnings.',
     locale,
     pathname: '',
-    image: '/dragonfire/og-image.png',
+    image:
+      'https://img.itch.zone/aW1nLzI3NTUxNjgxLmpwZw==/original/96%2Fy%2FZ.jpg',
   });
 }
 
 export default function HomePage() {
-  return <DragonfireHomePage />;
+  return <FalseSunHomePage />;
 }

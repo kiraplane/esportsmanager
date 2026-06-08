@@ -23,12 +23,12 @@ import type { MetadataRoute } from 'next';
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: defaultMessages.Metadata.name,
-    short_name: 'Dragonfire Wiki',
+    short_name: 'False Sun Wiki',
     description: defaultMessages.Metadata.description,
     start_url: '/',
     display: 'standalone',
-    background_color: '#070302',
-    theme_color: '#c2410c',
+    background_color: '#0A0F0C',
+    theme_color: '#D9B56A',
     icons: [
       {
         src: '/favicon-32x32.png',

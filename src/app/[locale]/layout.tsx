@@ -42,23 +42,26 @@ const CLIENT_MESSAGE_NAMESPACES = [
 
 const MARKETING_NAVBAR_KEYS = [
   'home',
-  'codes',
-  'tierList',
-  'dragons',
-  'resources',
-  'campaigns',
-  'alliances',
-  'download',
+  'allEndings',
+  'ending20',
+  'silasRoute',
+  'miniGames',
   'guides',
+  'download',
+  'contentWarnings',
 ] as const;
 
-const MARKETING_FOOTER_KEYS = ['tagline', 'wiki', 'guides', 'legal'] as const;
+const MARKETING_FOOTER_KEYS = [
+  'tagline',
+  'walkthrough',
+  'guides',
+  'legal',
+] as const;
 const MARKETING_FOOTER_GUIDE_ITEM_KEYS = [
   'all',
-  'beginner',
-  'tierList',
-  'resources',
-  'alliances',
+  'download',
+  'contentWarnings',
+  'disclaimer',
 ] as const;
 
 function pickKeys<T extends MessageMap, K extends readonly string[]>(

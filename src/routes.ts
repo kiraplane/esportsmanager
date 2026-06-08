@@ -12,23 +12,14 @@ export enum Routes {
   TermsOfService = '/terms',
   Disclaimer = '/disclaimer',
 
-  // Game of Thrones Dragonfire guide routes
-  Codes = '/codes',
-  TierList = '/tier-list',
-  Dragons = '/dragons',
-  Resources = '/resources',
-  Campaigns = '/campaigns',
-  CampaignResetGuide = '/campaigns/reset-guide',
-  Reigns = '/reigns',
-  Alliances = '/alliances',
-  Factions = '/factions',
-  Stronghold = '/stronghold',
+  // The False Sun walkthrough routes
+  AllEndings = '/all-endings',
+  Ending20 = '/ending-20',
+  SilasRoute = '/silas-route',
+  KyleRoute = '/kyle-route',
+  MiniGames = '/mini-games',
+  ContentWarnings = '/content-warnings',
   Guides = '/guides',
-  Updates = '/updates',
-  BeginnerGuide = '/guides/beginner-guide',
-  ResourceGuide = '/guides/resource-guide',
-  AllianceGuide = '/guides/alliance-guide',
-  TierListGuide = '/guides/tier-list-best-dragons',
   Download = '/download',
 
   // auth routes
@@ -55,22 +46,12 @@ export enum Routes {
 /**
  * The routes that can not be accessed by logged in users
  */
-export const routesNotAllowedByLoggedInUsers = [Routes.Login, Routes.Register];
+export const routesNotAllowedByLoggedInUsers: Routes[] = [];
 
 /**
  * The routes that are protected and require authentication
  */
-export const protectedRoutes = [
-  Routes.Dashboard,
-  Routes.AdminUsers,
-  Routes.AdminTestCreditPackage,
-  Routes.SettingsProfile,
-  Routes.SettingsBilling,
-  Routes.SettingsCredits,
-  Routes.SettingsSecurity,
-  Routes.SettingsNotifications,
-  Routes.Payment,
-];
+export const protectedRoutes: Routes[] = [];
 
 /**
  * The default redirect path after logging in

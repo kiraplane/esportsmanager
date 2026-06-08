@@ -4,13 +4,11 @@ import { Routes } from '@/routes';
 import type { NestedMenuItem } from '@/types';
 import {
   BookOpen,
-  Castle,
-  ClipboardList,
   Download,
-  Flame,
+  HeartPulse,
+  ListChecks,
+  ShieldAlert,
   Sparkles,
-  Trophy,
-  Users,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
@@ -19,34 +17,28 @@ export function useNavbarLinks(): NestedMenuItem[] {
 
   return [
     {
-      title: t('codes.title'),
-      href: Routes.Codes,
+      title: t('allEndings.title'),
+      href: Routes.AllEndings,
       external: false,
-      icon: <ClipboardList className="size-4" />,
+      icon: <ListChecks className="size-4" />,
     },
     {
-      title: t('tierList.title'),
-      href: Routes.TierList,
-      external: false,
-      icon: <Trophy className="size-4" />,
-    },
-    {
-      title: t('dragons.title'),
-      href: Routes.Dragons,
-      external: false,
-      icon: <Flame className="size-4" />,
-    },
-    {
-      title: t('resources.title'),
-      href: Routes.Resources,
-      external: false,
-      icon: <Castle className="size-4" />,
-    },
-    {
-      title: t('campaigns.title'),
-      href: Routes.Campaigns,
+      title: t('ending20.title'),
+      href: Routes.Ending20,
       external: false,
       icon: <Sparkles className="size-4" />,
+    },
+    {
+      title: t('silasRoute.title'),
+      href: Routes.SilasRoute,
+      external: false,
+      icon: <HeartPulse className="size-4" />,
+    },
+    {
+      title: t('miniGames.title'),
+      href: Routes.MiniGames,
+      external: false,
+      icon: <BookOpen className="size-4" />,
     },
     {
       title: t('guides.title'),
@@ -55,16 +47,16 @@ export function useNavbarLinks(): NestedMenuItem[] {
       icon: <BookOpen className="size-4" />,
     },
     {
-      title: t('alliances.title'),
-      href: Routes.Alliances,
-      external: false,
-      icon: <Users className="size-4" />,
-    },
-    {
       title: t('download.title'),
       href: Routes.Download,
       external: false,
       icon: <Download className="size-4" />,
+    },
+    {
+      title: t('contentWarnings.title'),
+      href: Routes.ContentWarnings,
+      external: false,
+      icon: <ShieldAlert className="size-4" />,
     },
   ];
 }
