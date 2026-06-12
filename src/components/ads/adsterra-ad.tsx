@@ -93,6 +93,13 @@ export function AdsterraAdStack({ className }: { className?: string }) {
   );
 }
 
+const SIDE_RAIL_CONTAINER_WIDTH = 1280;
+const SIDE_RAIL_WIDTH = 160;
+const SIDE_RAIL_GAP = 24;
+const sideRailOffset = `calc((100vw - ${SIDE_RAIL_CONTAINER_WIDTH}px) / 2 - ${
+  SIDE_RAIL_WIDTH + SIDE_RAIL_GAP
+}px)`;
+
 export function AdsterraSideRails() {
   const left = getAdsterraSlot('sidebar-160x600');
   const right = getAdsterraSlot('sidebar-160x300');
@@ -102,11 +109,14 @@ export function AdsterraSideRails() {
   }
 
   return (
-    <aside className="pointer-events-none hidden 2xl:block" aria-hidden>
+    <aside
+      className="pointer-events-none hidden [@media(min-width:1700px)]:block"
+      aria-hidden
+    >
       {left.enabled ? (
         <div
           className="pointer-events-auto fixed top-[88px] z-20 w-40"
-          style={{ left: 'calc((100vw - 1152px) / 2 - 184px)' }}
+          style={{ left: sideRailOffset }}
         >
           <AdsterraAdFrame slot="sidebar-160x600" />
         </div>
@@ -114,7 +124,7 @@ export function AdsterraSideRails() {
       {right.enabled ? (
         <div
           className="pointer-events-auto fixed top-[88px] z-20 w-40"
-          style={{ right: 'calc((100vw - 1152px) / 2 - 184px)' }}
+          style={{ right: sideRailOffset }}
         >
           <AdsterraAdFrame slot="sidebar-160x300" />
         </div>
