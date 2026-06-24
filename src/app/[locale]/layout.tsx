@@ -9,7 +9,6 @@ import {
 import GoogleAdsense from '@/components/ads/google-adsense';
 import AffonsoScript from '@/components/affiliate/affonso';
 import PromotekitScript from '@/components/affiliate/promotekit';
-import { TailwindIndicator } from '@/components/layout/tailwind-indicator';
 import { getMessagesForLocale } from '@/i18n/messages';
 import { routing } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
@@ -195,7 +194,6 @@ export default async function LocaleLayout({
               {children}
 
               <Toaster richColors position="top-right" offset={64} />
-              <TailwindIndicator />
               <Analytics />
             </Providers>
           </NextIntlClientProvider>

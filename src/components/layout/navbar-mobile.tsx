@@ -90,7 +90,7 @@ export function NavbarMobile({
             aria-label="Toggle Mobile Menu"
             onClick={handleToggleMobileMenu}
             className="size-8 flex aspect-square h-fit cursor-pointer select-none items-center
-              justify-center rounded-md border border-[#4B6B66] text-[#F3EDE1]"
+              justify-center rounded-md border border-[#4B6B66] text-[#F3EDE1] hover:border-[#FFB68A] hover:bg-[#263A34]"
           >
             {open ? (
               <XIcon className="size-4" />
@@ -128,7 +128,7 @@ function MainMobileMenu({ onLinkClicked }: MainMobileMenuProps) {
   return (
     <div
       className="fixed w-full inset-0 z-50 mt-[64px] overflow-y-auto
-      border-[#4B6B66] border-t bg-[#08100D] text-foreground backdrop-blur-md animate-in fade-in-0"
+      border-[#4B6B66] border-t bg-[#08100D] text-[#F3EDE1] backdrop-blur-md animate-in fade-in-0"
     >
       <div className="size-full flex flex-col items-start space-y-4 pt-4">
         {/* main menu */}
@@ -164,11 +164,11 @@ function MainMobileMenu({ onLinkClicked }: MainMobileMenuProps) {
                         variant="ghost"
                         className={cn(
                           'flex w-full !pl-2 items-center justify-between text-left',
-                          'bg-transparent text-muted-foreground cursor-pointer',
-                          'hover:bg-transparent hover:text-primary',
-                          'focus:bg-transparent focus:text-primary',
+                          'bg-transparent text-[#CDEAE7] cursor-pointer',
+                          'hover:bg-transparent hover:text-[#FFB68A]',
+                          'focus:bg-transparent focus:text-[#FFB68A]',
                           isActive &&
-                            'font-semibold bg-transparent text-primary'
+                            'font-semibold bg-transparent text-[#FFB68A]'
                         )}
                       >
                         <span className="text-base">{item.title}</span>
@@ -199,22 +199,22 @@ function MainMobileMenu({ onLinkClicked }: MainMobileMenuProps) {
                                 className={cn(
                                   buttonVariants({ variant: 'ghost' }),
                                   'group h-auto w-full justify-start gap-4 p-1 !pl-0 !pr-3',
-                                  'bg-transparent text-muted-foreground cursor-pointer',
-                                  'hover:bg-transparent hover:text-primary',
-                                  'focus:bg-transparent focus:text-primary',
+                                  'bg-transparent text-[#CDEAE7] cursor-pointer',
+                                  'hover:bg-transparent hover:text-[#FFB68A]',
+                                  'focus:bg-transparent focus:text-[#FFB68A]',
                                   isSubItemActive &&
-                                    'font-semibold bg-transparent text-primary'
+                                    'font-semibold bg-transparent text-[#FFB68A]'
                                 )}
                                 onClick={onLinkClicked}
                               >
                                 <div
                                   className={cn(
                                     'flex size-8 shrink-0 items-center justify-center transition-colors ml-0',
-                                    'bg-transparent text-muted-foreground',
-                                    'group-hover:bg-transparent group-hover:text-primary',
-                                    'group-focus:bg-transparent group-focus:text-primary',
+                                    'bg-transparent text-[#CDEAE7]',
+                                    'group-hover:bg-transparent group-hover:text-[#FFB68A]',
+                                    'group-focus:bg-transparent group-focus:text-[#FFB68A]',
                                     isSubItemActive &&
-                                      'bg-transparent text-primary'
+                                      'bg-transparent text-[#FFB68A]'
                                   )}
                                 >
                                   {subItem.icon ? subItem.icon : null}
@@ -222,11 +222,11 @@ function MainMobileMenu({ onLinkClicked }: MainMobileMenuProps) {
                                 <div className="flex-1">
                                   <span
                                     className={cn(
-                                      'text-sm text-muted-foreground',
-                                      'group-hover:bg-transparent group-hover:text-primary',
-                                      'group-focus:bg-transparent group-focus:text-primary',
+                                      'text-sm text-[#CDEAE7]',
+                                      'group-hover:bg-transparent group-hover:text-[#FFB68A]',
+                                      'group-focus:bg-transparent group-focus:text-[#FFB68A]',
                                       isSubItemActive &&
-                                        'font-semibold bg-transparent text-primary'
+                                        'font-semibold bg-transparent text-[#FFB68A]'
                                     )}
                                   >
                                     {subItem.title}
@@ -249,11 +249,11 @@ function MainMobileMenu({ onLinkClicked }: MainMobileMenuProps) {
                                 {subItem.external && (
                                   <ArrowUpRightIcon
                                     className={cn(
-                                      'size-4 shrink-0 text-muted-foreground items-center',
-                                      'group-hover:bg-transparent group-hover:text-primary',
-                                      'group-focus:bg-transparent group-focus:text-primary',
+                                      'size-4 shrink-0 text-[#CDEAE7] items-center',
+                                      'group-hover:bg-transparent group-hover:text-[#FFB68A]',
+                                      'group-focus:bg-transparent group-focus:text-[#FFB68A]',
                                       isSubItemActive &&
-                                        'bg-transparent text-primary'
+                                        'bg-transparent text-[#FFB68A]'
                                     )}
                                   />
                                 )}
@@ -272,10 +272,10 @@ function MainMobileMenu({ onLinkClicked }: MainMobileMenuProps) {
                     className={cn(
                       buttonVariants({ variant: 'ghost' }),
                       'w-full !pl-2 justify-start cursor-pointer group',
-                      'bg-transparent text-muted-foreground',
-                      'hover:bg-transparent hover:text-primary',
-                      'focus:bg-transparent focus:text-primary',
-                      isActive && 'font-semibold bg-transparent text-primary'
+                      'bg-transparent text-[#CDEAE7]',
+                      'hover:bg-transparent hover:text-[#FFB68A]',
+                      'focus:bg-transparent focus:text-[#FFB68A]',
+                      isActive && 'font-semibold bg-transparent text-[#FFB68A]'
                     )}
                     onClick={onLinkClicked}
                   >
@@ -290,7 +290,7 @@ function MainMobileMenu({ onLinkClicked }: MainMobileMenuProps) {
         </ul>
 
         {/* bottom buttons */}
-        <div className="flex w-full items-center justify-center gap-4 border-t border-border/50 p-4">
+        <div className="flex w-full items-center justify-center gap-4 border-[#4B6B66]/50 border-t p-4">
           <LocaleSelector />
         </div>
       </div>

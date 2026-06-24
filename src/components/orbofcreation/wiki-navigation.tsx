@@ -5,9 +5,12 @@ import { cn } from '@/lib/utils';
 import {
   ArrowRight,
   BookOpen,
+  ChevronDown,
   Compass,
+  FlaskConical,
   Gamepad2,
   Menu,
+  RotateCcw,
   ShieldCheck,
   Wand2,
 } from 'lucide-react';
@@ -34,23 +37,29 @@ const wikiNavRoutes = [
   {
     title: 'Start Here',
     icon: Gamepad2,
-    routes: ['/', '/play-online', '/guides/beginner-guide', '/guides'],
+    routes: ['/', '/play-online', '/guides', '/guides/beginner-guide'],
   },
   {
-    title: 'Core Systems',
+    title: 'Spell Systems',
     icon: Wand2,
-    routes: [
-      '/spells',
-      '/research',
-      '/rituals',
-      '/guides/alchemy-druidry',
-      '/guides/new-game-plus',
-    ],
+    routes: ['/spells', '/research', '/rituals'],
+  },
+  {
+    title: 'Progression',
+    icon: RotateCcw,
+    routes: ['/guides/alchemy-druidry', '/guides/new-game-plus'],
   },
   {
     title: 'Official & Safety',
     icon: ShieldCheck,
-    routes: ['/steam', '/download', '/itch-io', '/discord', '/mobile'],
+    routes: [
+      '/steam',
+      '/itch-io',
+      '/download',
+      '/discord',
+      '/mobile',
+      '/disclaimer',
+    ],
   },
 ] as const;
 
@@ -122,8 +131,8 @@ export function WikiRouteSidebar({
   const groups = getWikiNavGroups(locale);
 
   return (
-    <aside className="hidden w-[264px] shrink-0 space-y-4 lg:block">
-      <div className="sticky top-24 space-y-4">
+    <aside className="sticky top-24 hidden w-[264px] shrink-0 self-start space-y-4 lg:block">
+      <div className="space-y-4">
         <div className="rounded-lg border border-[#4B6B66] bg-[#1B2630] p-4">
           <div className="flex items-center justify-between gap-3">
             <div>
@@ -138,34 +147,60 @@ export function WikiRouteSidebar({
           </div>
 
           <div className="mt-4 space-y-4">
-            {groups.map((group) => (
-              <div key={group.title}>
-                <div className="mb-2 flex items-center gap-2 text-sm font-semibold text-[#F3EDE1]">
-                  <group.icon className="size-4 text-[#FFB68A]" />
-                  {group.title}
-                </div>
-                <div className="grid gap-2">
-                  {group.links.map((link) => (
-                    <WikiNavLinkItem
-                      key={link.href}
-                      currentPath={currentPath}
-                      href={link.href}
-                      label={link.label}
-                    />
-                  ))}
-                </div>
-              </div>
-            ))}
+            {groups.map((group) => {
+              const isGroupActive = group.links.some((link) =>
+                isCurrentPath(currentPath, link.href)
+              );
+
+              return (
+                <details
+                  key={group.title}
+                  open={isGroupActive}
+                  className={cn(
+                    'group rounded-md border p-3',
+                    isGroupActive
+                      ? 'border-[#FFB68A]/65 bg-[#FFB68A]/10'
+                      : 'border-[#4B6B66] bg-[#111915]'
+                  )}
+                >
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-2 text-sm font-semibold text-[#F3EDE1] [&::-webkit-details-marker]:hidden">
+                    <span className="flex min-w-0 items-center gap-2">
+                      <group.icon className="size-4 shrink-0 text-[#FFB68A]" />
+                      <span className="min-w-0 break-words">{group.title}</span>
+                    </span>
+                    <span className="ml-auto rounded-full bg-white/8 px-1.5 py-0.5 text-[10px] font-medium text-[#CDEAE7]">
+                      {group.links.length}
+                    </span>
+                    <ChevronDown className="size-4 shrink-0 text-[#97CBDB] transition group-open:rotate-180" />
+                  </summary>
+                  <div className="mt-3 grid gap-2">
+                    {group.links.map((link) => (
+                      <WikiNavLinkItem
+                        key={link.href}
+                        currentPath={currentPath}
+                        href={link.href}
+                        label={link.label}
+                      />
+                    ))}
+                  </div>
+                </details>
+              );
+            })}
           </div>
         </div>
 
         {sectionLinks.length > 0 ? (
-          <div className="rounded-lg border border-[#4B6B66] bg-[#1B2630] p-4">
-            <div className="flex items-center gap-2">
-              <BookOpen className="size-4 text-[#FFB68A]" />
-              <h2 className="font-display text-lg font-bold">On this page</h2>
-            </div>
-            <div className="mt-3 grid gap-2">
+          <details className="group rounded-lg border border-[#4B6B66] bg-[#1B2630] p-4">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-3 [&::-webkit-details-marker]:hidden">
+              <span className="flex items-center gap-2">
+                <BookOpen className="size-4 text-[#FFB68A]" />
+                <span className="font-display text-lg font-bold">
+                  On this page
+                </span>
+              </span>
+              <ChevronDown className="size-4 shrink-0 text-[#97CBDB] transition group-open:rotate-180" />
+            </summary>
+            <div className="mt-3 grid gap-2 border-[#4B6B66] border-t pt-3">
               {sectionLinks.slice(0, 6).map((section) => (
                 <a
                   key={section.href}
@@ -176,7 +211,7 @@ export function WikiRouteSidebar({
                 </a>
               ))}
             </div>
-          </div>
+          </details>
         ) : null}
 
         {children}
@@ -228,25 +263,68 @@ export function MobileWikiNav({
       ) : null}
 
       <div className="mt-4 grid gap-4 border-[#4B6B66] border-t pt-4">
-        {groups.map((group) => (
-          <div key={group.title}>
-            <div className="mb-2 flex items-center gap-2 text-sm font-semibold text-[#F3EDE1]">
-              <group.icon className="size-4 text-[#FFB68A]" />
-              {group.title}
-            </div>
-            <div className="grid gap-2 sm:grid-cols-2">
-              {group.links.map((link) => (
-                <WikiNavLinkItem
-                  key={link.href}
-                  currentPath={currentPath}
-                  href={link.href}
-                  label={link.label}
-                />
-              ))}
-            </div>
-          </div>
-        ))}
+        {groups.map((group) => {
+          const isGroupActive = group.links.some((link) =>
+            isCurrentPath(currentPath, link.href)
+          );
+
+          return (
+            <details
+              key={group.title}
+              open={isGroupActive}
+              className="group rounded-md border border-[#4B6B66] bg-[#111915] p-3"
+            >
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-2 text-sm font-semibold text-[#F3EDE1] [&::-webkit-details-marker]:hidden">
+                <span className="flex min-w-0 items-center gap-2">
+                  <group.icon className="size-4 shrink-0 text-[#FFB68A]" />
+                  <span className="min-w-0 break-words">{group.title}</span>
+                </span>
+                <span className="ml-auto rounded-full bg-white/8 px-1.5 py-0.5 text-[10px] font-medium text-[#CDEAE7]">
+                  {group.links.length}
+                </span>
+                <ChevronDown className="size-4 shrink-0 text-[#97CBDB] transition group-open:rotate-180" />
+              </summary>
+              <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                {group.links.map((link) => (
+                  <WikiNavLinkItem
+                    key={link.href}
+                    currentPath={currentPath}
+                    href={link.href}
+                    label={link.label}
+                  />
+                ))}
+              </div>
+            </details>
+          );
+        })}
       </div>
     </details>
+  );
+}
+
+export function QuickWikiLinks({ locale }: { locale?: Locale }) {
+  const routeLabels = getHomeContent(locale).routeLabels;
+  const quickRoutes = [
+    { href: '/play-online', label: 'Play online', icon: Gamepad2 },
+    { href: '/guides/beginner-guide', label: 'Beginner', icon: BookOpen },
+    { href: '/spells', label: 'Spells', icon: Wand2 },
+    { href: '/research', label: 'Research', icon: Compass },
+    { href: '/guides/alchemy-druidry', label: 'Alchemy', icon: FlaskConical },
+  ];
+
+  return (
+    <div className="flex flex-wrap gap-2">
+      {quickRoutes.map((route) => (
+        <LocaleLink
+          key={route.href}
+          href={route.href}
+          aria-label={routeLabels[route.href]}
+          className="inline-flex h-auto items-center gap-1.5 rounded-md border border-[#4B6B66] bg-[#111915]/80 px-2.5 py-1.5 text-[#F3EDE1] text-xs transition hover:border-[#FFB68A] hover:bg-[#263A34] sm:text-sm"
+        >
+          <route.icon className="size-3.5 shrink-0 text-[#FFB68A]" />
+          {route.label}
+        </LocaleLink>
+      ))}
+    </div>
   );
 }

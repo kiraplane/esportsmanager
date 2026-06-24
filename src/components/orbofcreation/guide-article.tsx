@@ -123,7 +123,7 @@ export function GuideArticle({
       <JsonLd data={jsonLd} />
       <AdsterraSideRails />
       <Container className="px-4">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_264px]">
+        <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_264px]">
           <article className="min-w-0 space-y-6">
             <header className="rounded-lg border border-[#4B6B66] bg-[#1B2630] p-5 md:p-7">
               <div className="flex flex-wrap gap-2">
@@ -161,48 +161,6 @@ export function GuideArticle({
                   sectionLinks={sectionLinks}
                 />
               </div>
-
-              <section className="mt-5 grid gap-4 rounded-lg border border-[#4B6B66] bg-[#111915] p-4 md:grid-cols-[1fr_0.9fr]">
-                <div>
-                  <h2 className="font-display text-xl font-bold">
-                    Quick answer
-                  </h2>
-                  <p className="mt-2 text-sm leading-7 text-[#CDEAE7]">
-                    {guide.summary}
-                  </p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {nextRoutes.map((route) => (
-                      <Button
-                        key={route}
-                        asChild
-                        size="sm"
-                        variant="outline"
-                        className="h-auto min-w-0 whitespace-normal border-[#4B6B66] bg-[#1B2630] text-left text-[#F3EDE1] hover:bg-[#263A34]"
-                      >
-                        <LocaleLink href={route}>
-                          {getRelatedRouteLabel(route, routeLabels)}
-                        </LocaleLink>
-                      </Button>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h2 className="font-display text-xl font-bold">
-                    {ui.sectionsTitle}
-                  </h2>
-                  <div className="mt-3 grid gap-2">
-                    {sectionLinks.slice(0, 5).map((section) => (
-                      <a
-                        key={section.href}
-                        href={section.href}
-                        className="rounded-md border border-[#4B6B66] bg-[#1B2630] px-3 py-2 text-sm leading-6 text-[#CDEAE7] transition hover:border-[#FFB68A] hover:text-[#F3EDE1]"
-                      >
-                        {section.label}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </section>
             </header>
 
             <div className="overflow-hidden rounded-lg border border-[#4B6B66] bg-[#1B2630]">

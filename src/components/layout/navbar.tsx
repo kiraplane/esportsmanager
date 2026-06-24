@@ -26,11 +26,13 @@ interface NavBarProps {
 
 const customNavigationMenuTriggerStyle = cn(
   navigationMenuTriggerStyle(),
-  'relative bg-transparent text-muted-foreground cursor-pointer text-base',
-  'hover:bg-primary/10 hover:text-primary',
-  'focus:bg-primary/10 focus:text-primary',
-  'data-active:font-semibold data-active:bg-transparent data-active:text-primary',
-  'data-[state=open]:bg-primary/10 data-[state=open]:text-primary'
+  'relative cursor-pointer border border-transparent bg-transparent text-base text-[#CDEAE7]',
+  'hover:border-[#FFB68A]/35 hover:bg-[#263A34] hover:text-[#F3EDE1]',
+  'focus:border-[#FFB68A]/35 focus:bg-[#263A34] focus:text-[#F3EDE1]',
+  'focus-visible:ring-[#FFB68A]/45',
+  'data-active:border-[#FFB68A]/55 data-active:bg-[#263A34] data-active:text-[#FFB68A]',
+  'data-[active=true]:border-[#FFB68A]/55 data-[active=true]:bg-[#263A34] data-[active=true]:text-[#FFB68A]',
+  'data-[state=open]:border-[#FFB68A]/35 data-[state=open]:bg-[#263A34] data-[state=open]:text-[#F3EDE1]'
 );
 
 function isCurrentPathActive(pathname: string, href?: string) {
@@ -50,12 +52,12 @@ export function Navbar({ scroll }: NavBarProps) {
   return (
     <section
       className={cn(
-        'sticky inset-x-0 top-0 z-40 py-4 text-foreground transition-all duration-300',
+        'sticky inset-x-0 top-0 z-50 border-[#4B6B66] border-b py-4 text-[#F3EDE1] backdrop-blur-md transition-all duration-300',
         scroll
           ? scrolled
-            ? 'border-[#4B6B66] border-b bg-[#08100D]/90 backdrop-blur-md supports-backdrop-filter:bg-[#08100D]/90'
-            : 'bg-transparent'
-          : 'border-[#4B6B66] border-b bg-[#08100D]/90 backdrop-blur-md'
+            ? 'bg-[#08100D]/94 shadow-[0_8px_24px_rgba(8,16,13,0.28)] supports-backdrop-filter:bg-[#08100D]/94'
+            : 'bg-[#08100D]/88 supports-backdrop-filter:bg-[#08100D]/88'
+          : 'bg-[#08100D]/94 supports-backdrop-filter:bg-[#08100D]/94'
       )}
     >
       <Container className="px-4">
@@ -113,20 +115,20 @@ export function Navbar({ scroll }: NavBarProps) {
                                     className={cn(
                                       'group flex select-none flex-row items-center gap-4 rounded-md',
                                       'p-2 leading-none no-underline outline-hidden transition-colors',
-                                      'hover:bg-primary/10 hover:text-primary',
-                                      'focus:bg-primary/10 focus:text-primary',
+                                      'hover:bg-[#263A34] hover:text-[#FFB68A]',
+                                      'focus:bg-[#263A34] focus:text-[#FFB68A]',
                                       isSubItemActive &&
-                                        'bg-primary/10 text-primary'
+                                        'bg-[#263A34] text-[#FFB68A]'
                                     )}
                                   >
                                     <div
                                       className={cn(
                                         'flex size-8 shrink-0 items-center justify-center transition-colors',
-                                        'bg-transparent text-muted-foreground',
-                                        'group-hover:bg-transparent group-hover:text-primary',
-                                        'group-focus:bg-transparent group-focus:text-primary',
+                                        'bg-transparent text-[#CDEAE7]',
+                                        'group-hover:bg-transparent group-hover:text-[#FFB68A]',
+                                        'group-focus:bg-transparent group-focus:text-[#FFB68A]',
                                         isSubItemActive &&
-                                          'bg-transparent text-primary'
+                                          'bg-transparent text-[#FFB68A]'
                                       )}
                                     >
                                       {subItem.icon ? subItem.icon : null}
@@ -134,11 +136,11 @@ export function Navbar({ scroll }: NavBarProps) {
                                     <div className="flex-1">
                                       <div
                                         className={cn(
-                                          'text-sm font-medium text-muted-foreground',
-                                          'group-hover:bg-transparent group-hover:text-primary',
-                                          'group-focus:bg-transparent group-focus:text-primary',
+                                          'text-sm font-medium text-[#CDEAE7]',
+                                          'group-hover:bg-transparent group-hover:text-[#FFB68A]',
+                                          'group-focus:bg-transparent group-focus:text-[#FFB68A]',
                                           isSubItemActive &&
-                                            'bg-transparent text-primary'
+                                            'bg-transparent text-[#FFB68A]'
                                         )}
                                       >
                                         {subItem.title}
@@ -146,11 +148,11 @@ export function Navbar({ scroll }: NavBarProps) {
                                       {subItem.description && (
                                         <div
                                           className={cn(
-                                            'text-sm text-muted-foreground',
-                                            'group-hover:bg-transparent group-hover:text-primary/80',
-                                            'group-focus:bg-transparent group-focus:text-primary/80',
+                                            'text-sm text-[#CDEAE7]',
+                                            'group-hover:bg-transparent group-hover:text-[#FFD0A8]',
+                                            'group-focus:bg-transparent group-focus:text-[#FFD0A8]',
                                             isSubItemActive &&
-                                              'bg-transparent text-primary/80'
+                                              'bg-transparent text-[#FFD0A8]'
                                           )}
                                         >
                                           {subItem.description}
@@ -160,11 +162,11 @@ export function Navbar({ scroll }: NavBarProps) {
                                     {subItem.external && (
                                       <ArrowUpRightIcon
                                         className={cn(
-                                          'size-4 shrink-0 text-muted-foreground',
-                                          'group-hover:bg-transparent group-hover:text-primary',
-                                          'group-focus:bg-transparent group-focus:text-primary',
+                                          'size-4 shrink-0 text-[#CDEAE7]',
+                                          'group-hover:bg-transparent group-hover:text-[#FFB68A]',
+                                          'group-focus:bg-transparent group-focus:text-[#FFB68A]',
                                           isSubItemActive &&
-                                            'bg-transparent text-primary'
+                                            'bg-transparent text-[#FFB68A]'
                                         )}
                                       />
                                     )}
