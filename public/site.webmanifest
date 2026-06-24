@@ -1,11 +1,11 @@
 {
-  "name": "The False Sun Wiki",
-  "short_name": "False Sun Wiki",
-  "description": "The False Sun Wiki for walkthroughs, all endings, Ending 20, route guides, mini-games, and safe downloads.",
+  "name": "Orb of Creation Wiki",
+  "short_name": "Orb Wiki",
+  "description": "Orb of Creation wiki for play online, beginner guides, spells, research, rituals, Steam 1.0, itch.io, Discord, and safe downloads.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#070302",
-  "theme_color": "#c2410c",
+  "background_color": "#111915",
+  "theme_color": "#FFB68A",
   "icons": [
     {
       "src": "/favicon-32x32.png",

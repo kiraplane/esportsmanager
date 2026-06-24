@@ -10,9 +10,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return constructMetadata({
-    title: 'Terms of Service | The False Sun',
+    title: 'Terms of Service | Orb of Creation Wiki',
     description:
-      'Terms for using The False Sun, an unofficial walkthrough site.',
+      'Terms for using Orb of Creation Wiki, an unofficial Orb of Creation guide site.',
     locale,
     pathname: '/terms',
   });
@@ -20,26 +20,27 @@ export async function generateMetadata({
 
 export default function TermsOfServicePage() {
   return (
-    <div className="bg-[#0A0F0C] py-12 text-[#F7E8C9]">
+    <div className="bg-[#111915] py-12 text-[#F3EDE1]">
       <Container className="max-w-3xl space-y-6 px-4">
         <h1 className="font-display text-4xl font-black">Terms of Service</h1>
-        <p className="leading-8 text-[#C7BAA7]">
-          This site provides unofficial walkthroughs for The False Sun, route
-          notes, ending trackers, and download guidance. It is not affiliated
-          with, endorsed by, sponsored by, or operated by Oniray or itch.io.
+        <p className="leading-8 text-[#CDEAE7]">
+          This site provides unofficial Orb of Creation guides, browser play
+          access, source notes, and official-link guidance. It is not affiliated
+          with, endorsed by, sponsored by, or operated by MarpleGames, Valve,
+          Steam, or itch.io.
         </p>
-        <p className="leading-8 text-[#C7BAA7]">
-          Route details can change after updates or after direct replay
-          verification. Ending labels and confidence notes should be treated as
-          guidance, not official instructions.
+        <p className="leading-8 text-[#CDEAE7]">
+          Mechanics, spell names, and progression details can change after game
+          updates. Treat guide pages as community-oriented guidance and verify
+          important details in your current game version.
         </p>
-        <p className="leading-8 text-[#C7BAA7]">
+        <p className="leading-8 text-[#CDEAE7]">
           Do not use this site to distribute unauthorized game files, unsafe
-          APKs, modified clients, automation scripts, explicit adult content, or
-          copied game script.
+          APKs, modified clients, save editors, copied paid Steam files, or
+          automation scripts.
         </p>
-        <p className="leading-8 text-[#C7BAA7]">
-          Questions about these terms can be sent to hello@thefalsesun.wiki.
+        <p className="leading-8 text-[#CDEAE7]">
+          Questions about these terms can be sent to hello@orbofcreation.wiki.
         </p>
       </Container>
     </div>

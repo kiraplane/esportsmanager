@@ -12,22 +12,20 @@ export enum Routes {
   TermsOfService = '/terms',
   Disclaimer = '/disclaimer',
 
-  // The False Sun walkthrough routes
+  // Orb of Creation wiki routes
   Play = '/play-online',
-  AllEndings = '/all-endings',
-  SavePoints = '/save-points',
-  Ending20 = '/ending-20',
-  SilasRoute = '/silas-route',
-  HeLetYouGo = '/he-let-you-go',
-  KyleRoute = '/kyle-route',
-  MiniGames = '/mini-games',
-  ContentWarnings = '/content-warnings',
-  VisualNovel = '/visual-novel',
-  Bakker = '/bakker',
-  ItchIoDownload = '/itch-io-download',
   Guides = '/guides',
+  BeginnerGuide = '/guides/beginner-guide',
+  Spells = '/spells',
+  Research = '/research',
+  Rituals = '/rituals',
+  AlchemyDruidry = '/guides/alchemy-druidry',
+  NewGamePlus = '/guides/new-game-plus',
+  Steam = '/steam',
   Download = '/download',
   ItchIo = '/itch-io',
+  Discord = '/discord',
+  Mobile = '/mobile',
 
   // auth routes
   Login = '/auth/login',

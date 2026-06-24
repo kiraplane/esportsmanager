@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* The False Sun - mature visual-novel walkthrough theme */
+/* Orb of Creation - arcane incremental guide theme */
 
 :root {
   --font-noto-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -389,11 +389,11 @@ body {
 }
 
 /*
- * The False Sun theme colors
+ * Orb of Creation theme colors
  */
 .theme-default {
-  --primary: #d9b56a;
-  --primary-foreground: #15110b;
+  --primary: #ffb68a;
+  --primary-foreground: #2a1720;
 }
 
 .theme-blue {

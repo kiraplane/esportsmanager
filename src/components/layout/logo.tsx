@@ -1,21 +1,26 @@
 'use client';
 
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 export function Logo({ className }: { className?: string }) {
   return (
     <span
-      aria-label="The False Sun logo"
-      title="The False Sun"
+      aria-label="Orb of Creation logo"
+      title="Orb of Creation"
       className={cn(
-        'relative inline-flex size-11 shrink-0 items-center justify-center rounded-full',
-        'border border-[#D9B56A]/70 bg-[#0A0F0C] shadow-[0_0_34px_rgba(217,181,106,0.26)]',
+        'relative inline-flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-md',
+        'border border-[#FFB68A]/60 bg-[#111915] shadow-[0_0_30px_rgba(255,182,138,0.24)]',
         className
       )}
     >
-      <span className="absolute size-6 rounded-full bg-[#D9B56A]" />
-      <span className="absolute size-8 rounded-full border border-[#F7E8C9]/50" />
-      <span className="relative size-3 rounded-full bg-[#7B2635]" />
+      <Image
+        src="/orbofcreation/orb-of-creation-icon.png"
+        alt=""
+        fill
+        sizes="44px"
+        className="object-cover"
+      />
     </span>
   );
 }

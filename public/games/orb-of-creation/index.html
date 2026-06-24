@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes"
+    />
+    <title>Orb of Creation</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        background: #111915;
+      }
+
+      #unity-container {
+        position: fixed;
+        inset: 0;
+        background: #111915;
+      }
+
+      #unity-canvas {
+        width: 100%;
+        height: 100%;
+        background: #231f20;
+        display: block;
+      }
+
+      #unity-loading-bar {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: min(360px, calc(100vw - 48px));
+        transform: translate(-50%, -50%);
+        color: #cdeae7;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        text-align: center;
+      }
+
+      #unity-loading-title {
+        margin-bottom: 12px;
+        color: #ffb68a;
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+
+      #unity-progress-bar-empty {
+        height: 12px;
+        border: 1px solid #5d347f;
+        background: #1B2630;
+      }
+
+      #unity-progress-bar-full {
+        width: 0%;
+        height: 100%;
+        background: #ffb68a;
+      }
+
+      #unity-warning {
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        top: 16px;
+        z-index: 2;
+        color: #33241b;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      #unity-warning div {
+        margin: 0 auto 8px;
+        max-width: 760px;
+        border-radius: 6px;
+        background: #ffb68a;
+        padding: 10px 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="unity-container">
+      <canvas id="unity-canvas" width="1280" height="720" tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-loading-title">Loading Orb of Creation</div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-warning"></div>
+    </div>
+    <script>
+      var canvas = document.querySelector('#unity-canvas');
+      var loadingBar = document.querySelector('#unity-loading-bar');
+      var progressBarFull = document.querySelector('#unity-progress-bar-full');
+      var warningBanner = document.querySelector('#unity-warning');
+      var unityInstance = null;
+
+      window.orbResize = function () {
+        canvas.style.width = '100%';
+        canvas.style.height = '100%';
+      };
+
+      window.orbSetFullscreen = function (fullscreen) {
+        if (!fullscreen) {
+          if (document.fullscreenElement) {
+            document.exitFullscreen();
+            return true;
+          }
+          return false;
+        }
+
+        if (unityInstance && unityInstance.SetFullscreen) {
+          unityInstance.SetFullscreen(1);
+          return true;
+        }
+
+        if (canvas.requestFullscreen) {
+          canvas.requestFullscreen();
+          return true;
+        }
+
+        return false;
+      };
+
+      function unityShowBanner(msg, type) {
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type === 'error') {
+          div.style.background = '#ff8a8a';
+        } else {
+          setTimeout(function () {
+            warningBanner.removeChild(div);
+          }, 5000);
+        }
+      }
+
+      var buildUrl = 'Build';
+      var loaderUrl = buildUrl + '/v0.5.0 WebGL.loader.js';
+      var config = {
+        dataUrl: '/api/games/orb-of-creation/data?v=20260624-3',
+        frameworkUrl: buildUrl + '/v0.5.0 WebGL.framework.js',
+        codeUrl: '/api/games/orb-of-creation/wasm?v=20260624-3',
+        streamingAssetsUrl: 'StreamingAssets',
+        companyName: 'MarpleGames',
+        productName: 'Orb Of Creation',
+        productVersion: '0.5',
+        showBanner: unityShowBanner,
+      };
+
+      loadingBar.style.display = 'block';
+
+      var script = document.createElement('script');
+      script.src = loaderUrl;
+      script.onload = function () {
+        createUnityInstance(canvas, config, function (progress) {
+          progressBarFull.style.width = 100 * progress + '%';
+        })
+          .then(function (instance) {
+            unityInstance = instance;
+            loadingBar.style.display = 'none';
+            window.orbResize();
+          })
+          .catch(function (message) {
+            unityShowBanner(String(message), 'error');
+          });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>

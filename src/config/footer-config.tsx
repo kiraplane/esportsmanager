@@ -9,36 +9,26 @@ export function useFooterLinks(): NestedMenuItem[] {
 
   return [
     {
-      title: t('walkthrough.title'),
+      title: t('play.title'),
       items: [
         {
-          title: t('walkthrough.items.play'),
+          title: t('play.items.online'),
           href: Routes.Play,
           external: false,
         },
         {
-          title: t('walkthrough.items.allEndings'),
-          href: Routes.AllEndings,
+          title: t('play.items.steam'),
+          href: Routes.Steam,
           external: false,
         },
         {
-          title: t('walkthrough.items.ending20'),
-          href: Routes.Ending20,
+          title: t('play.items.itchIo'),
+          href: Routes.ItchIo,
           external: false,
         },
         {
-          title: t('walkthrough.items.silasRoute'),
-          href: Routes.SilasRoute,
-          external: false,
-        },
-        {
-          title: t('walkthrough.items.kyleRoute'),
-          href: Routes.KyleRoute,
-          external: false,
-        },
-        {
-          title: t('walkthrough.items.miniGames'),
-          href: Routes.MiniGames,
+          title: t('play.items.download'),
+          href: Routes.Download,
           external: false,
         },
       ],
@@ -52,22 +42,42 @@ export function useFooterLinks(): NestedMenuItem[] {
           external: false,
         },
         {
-          title: t('guides.items.download'),
-          href: Routes.Download,
+          title: t('guides.items.beginner'),
+          href: Routes.BeginnerGuide,
           external: false,
         },
         {
-          title: t('guides.items.itchIo'),
-          href: Routes.ItchIo,
+          title: t('guides.items.spells'),
+          href: Routes.Spells,
           external: false,
         },
         {
-          title: t('guides.items.contentWarnings'),
-          href: Routes.ContentWarnings,
+          title: t('guides.items.research'),
+          href: Routes.Research,
           external: false,
         },
         {
-          title: t('guides.items.disclaimer'),
+          title: t('guides.items.rituals'),
+          href: Routes.Rituals,
+          external: false,
+        },
+      ],
+    },
+    {
+      title: t('official.title'),
+      items: [
+        {
+          title: t('official.items.discord'),
+          href: Routes.Discord,
+          external: false,
+        },
+        {
+          title: t('official.items.mobile'),
+          href: Routes.Mobile,
+          external: false,
+        },
+        {
+          title: t('official.items.disclaimer'),
           href: Routes.Disclaimer,
           external: false,
         },
@@ -89,11 +99,6 @@ export function useFooterLinks(): NestedMenuItem[] {
         {
           title: t('legal.items.cookiePolicy'),
           href: Routes.CookiePolicy,
-          external: false,
-        },
-        {
-          title: t('legal.items.disclaimer'),
-          href: Routes.Disclaimer,
           external: false,
         },
       ],

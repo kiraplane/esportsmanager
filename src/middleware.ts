@@ -41,26 +41,22 @@ const retiredPublicRouteRedirects: Array<{
   { pattern: /^\/settings(?:\/.*)?$/, target: '/' },
   { pattern: /^\/payment(?:\/.*)?$/, target: '/' },
   { pattern: /^\/codes(?:\/.*)?$/, target: '/' },
-  { pattern: /^\/tier-list(?:\/.*)?$/, target: '/all-endings' },
-  { pattern: /^\/dragons(?:\/.*)?$/, target: '/all-endings' },
-  { pattern: /^\/resources(?:\/.*)?$/, target: '/mini-games' },
-  { pattern: /^\/campaigns(?:\/.*)?$/, target: '/all-endings' },
-  { pattern: /^\/alliances(?:\/.*)?$/, target: '/' },
+  { pattern: /^\/tier-list(?:\/.*)?$/, target: '/guides' },
+  { pattern: /^\/save-editor(?:\/.*)?$/, target: '/guides' },
   { pattern: /^\/updates(?:\/.*)?$/, target: '/guides' },
   { pattern: /^\/itchio\/?$/, target: '/itch-io' },
-  { pattern: /^\/itch-io-the-false-sun\/?$/, target: '/itch-io' },
-  { pattern: /^\/the-false-sun-itch-io\/?$/, target: '/itch-io' },
-  { pattern: /^\/oniray-itch-io\/?$/, target: '/itch-io' },
-  { pattern: /^\/download-the-false-sun\/?$/, target: '/download' },
-  { pattern: /^\/the-false-sun-download\/?$/, target: '/download' },
-  { pattern: /^\/the-false-sun-apk\/?$/, target: '/download' },
-  { pattern: /^\/android-download\/?$/, target: '/download' },
-  { pattern: /^\/ending20\/?$/, target: '/ending-20' },
-  { pattern: /^\/ending-20-guide\/?$/, target: '/ending-20' },
-  { pattern: /^\/the-false-sun-ending-20\/?$/, target: '/ending-20' },
-  { pattern: /^\/silas\/?$/, target: '/silas-route' },
-  { pattern: /^\/silas-the-false-sun\/?$/, target: '/silas-route' },
-  { pattern: /^\/the-false-sun-silas\/?$/, target: '/silas-route' },
+  { pattern: /^\/itch-io-orb-of-creation\/?$/, target: '/itch-io' },
+  { pattern: /^\/orb-of-creation-itch-io\/?$/, target: '/itch-io' },
+  { pattern: /^\/download-orb-of-creation\/?$/, target: '/download' },
+  { pattern: /^\/orb-of-creation-download\/?$/, target: '/download' },
+  { pattern: /^\/orb-of-creation-apk\/?$/, target: '/mobile' },
+  { pattern: /^\/android-download\/?$/, target: '/mobile' },
+  { pattern: /^\/orb-of-creation-mobile\/?$/, target: '/mobile' },
+  { pattern: /^\/orb-of-creation-discord\/?$/, target: '/discord' },
+  { pattern: /^\/orb-of-creation-steam\/?$/, target: '/steam' },
+  { pattern: /^\/orb-of-creation-research\/?$/, target: '/research' },
+  { pattern: /^\/orb-of-creation-spells\/?$/, target: '/spells' },
+  { pattern: /^\/orb-of-creation-rituals\/?$/, target: '/rituals' },
 ];
 
 export default async function middleware(req: NextRequest) {
@@ -68,8 +64,11 @@ export default async function middleware(req: NextRequest) {
   const hostHeader = req.headers.get('host');
   const hostname = hostHeader?.split(':')[0].toLowerCase();
   const forwardedProto = req.headers.get('x-forwarded-proto');
-  const productionHosts = new Set(['thefalsesun.wiki', 'www.thefalsesun.wiki']);
-  const canonicalHost = 'www.thefalsesun.wiki';
+  const productionHosts = new Set([
+    'orbofcreation.wiki',
+    'www.orbofcreation.wiki',
+  ]);
+  const canonicalHost = 'www.orbofcreation.wiki';
 
   if (
     hostname &&
@@ -114,22 +113,6 @@ export default async function middleware(req: NextRequest) {
     pathnameWithoutLocale.length > 1
       ? pathnameWithoutLocale.replace(/\/$/, '')
       : pathnameWithoutLocale;
-
-  const guideSlugRoute = normalizedPathnameWithoutLocale.match(
-    /^\/guides\/([a-z0-9-]+)$/
-  );
-
-  if (guideSlugRoute) {
-    const locale = getLocaleFromPathname(nextUrl.pathname, LOCALES);
-    const target = `/${guideSlugRoute[1]}`;
-    const localizedTarget =
-      locale && locale !== DEFAULT_LOCALE ? `/${locale}${target}` : target;
-
-    return NextResponse.redirect(
-      new URL(`${localizedTarget}${nextUrl.search}`, nextUrl),
-      308
-    );
-  }
 
   const retiredRoute = retiredPublicRouteRedirects.find(({ pattern }) =>
     pattern.test(pathnameWithoutLocale)

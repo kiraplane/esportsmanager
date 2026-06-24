@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "name": "The False Sun",
-    "title": "The False Sun - Walkthrough, All Endings and Route Guide",
-    "description": "The False Sun guide with all endings, Ending 20, Silas route, Kyle route, play online, mini-games, official download help, and mature-content warnings."
+    "name": "Orb of Creation",
+    "title": "Orb of Creation Wiki - Guides, Play Online and Steam 1.0",
+    "description": "Orb of Creation wiki with play online, beginner guide, spells, research, rituals, alchemy, New Game+, Steam, itch.io, Discord, and safe download help."
   },
   "Common": {
     "premium": "Premium",
@@ -54,8 +54,8 @@
   },
   "PricingPage": {
     "title": "Pricing",
-    "description": "Optional supporter plans for keeping The False Sun maintained",
-    "subtitle": "Simple support options for readers who want to help maintain spoiler-safe walkthrough updates",
+    "description": "Optional supporter plans for keeping Orb of Creation Wiki maintained",
+    "subtitle": "Simple support options for readers who want to help maintain current guides and hosting",
     "monthly": "Monthly",
     "yearly": "Yearly",
     "payAsYouGo": "Pay as you go",
@@ -80,15 +80,15 @@
   "PricePlans": {
     "free": {
       "name": "Free",
-      "description": "Browse The False Sun with no payment required",
+      "description": "Browse Orb of Creation Wiki with no payment required",
       "features": {
-        "feature-1": "All endings and route-cleanup guidance",
-        "feature-2": "Ending 20 and mini-game retry notes",
-        "feature-3": "Silas and Kyle route pages",
-        "feature-4": "Download and content-warning pages updated as sources change"
+        "feature-1": "Play-online page and official-link guidance",
+        "feature-2": "Beginner, spells, research, and ritual guides",
+        "feature-3": "Steam, itch.io, Discord, and mobile safety pages",
+        "feature-4": "Guide pages updated as sources change"
       },
       "limits": {
-        "limit-1": "Some route details still need direct replay verification",
+        "limit-1": "Some mechanics may change after game updates",
         "limit-2": "Guide updates depend on available sources",
         "limit-3": "Community feedback helps improve coverage",
         "limit-4": "This site is not affiliated with the creator"
@@ -99,9 +99,9 @@
       "description": "For readers who want to support ongoing walkthrough updates",
       "features": {
         "feature-1": "Support site maintenance",
-        "feature-2": "Help fund future route checks",
-        "feature-3": "Keep ending and mini-game pages fresh",
-        "feature-4": "Support cleaner walkthrough coverage",
+        "feature-2": "Help fund future source checks",
+        "feature-3": "Keep system guide pages fresh",
+        "feature-4": "Support cleaner wiki coverage",
         "feature-5": "Help improve page speed and hosting stability",
         "feature-6": "Support future guide experiments",
         "feature-7": "No gameplay advantage is sold",
@@ -113,7 +113,7 @@
     },
     "max": {
       "name": "Backer",
-      "description": "For heavier support of The False Sun maintenance",
+      "description": "For heavier support of Orb of Creation Wiki maintenance",
       "features": {
         "feature-1": "Support expanded guide coverage",
         "feature-2": "Help fund more frequent source reviews",
@@ -293,48 +293,51 @@
       "play": {
         "title": "Play Online"
       },
-      "allEndings": {
-        "title": "All Endings"
-      },
-      "ending20": {
-        "title": "Ending 20"
-      },
-      "silasRoute": {
-        "title": "Silas Route"
-      },
-      "miniGames": {
-        "title": "Mini-Games"
-      },
       "guides": {
         "title": "Guides"
+      },
+      "spells": {
+        "title": "Spells"
+      },
+      "research": {
+        "title": "Research"
+      },
+      "steam": {
+        "title": "Steam 1.0"
       },
       "download": {
         "title": "Download"
       },
-      "contentWarnings": {
-        "title": "Warnings"
+      "discord": {
+        "title": "Discord"
       }
     },
     "footer": {
-      "tagline": "An unofficial play-online and walkthrough guide for The False Sun endings, Ending 20, Silas and Kyle routes, mini-games, downloads, and spoiler-safe warnings.",
-      "walkthrough": {
-        "title": "Walkthrough",
+      "tagline": "Unofficial Orb of Creation wiki for play online, Steam 1.0, spells, research, rituals, alchemy, New Game+, and safe platform links.",
+      "play": {
+        "title": "Play",
         "items": {
-          "play": "Play Online",
-          "allEndings": "All Endings",
-          "ending20": "Ending 20",
-          "silasRoute": "Silas Route",
-          "kyleRoute": "Kyle Route",
-          "miniGames": "Mini-Games"
+          "online": "Play Online",
+          "steam": "Steam 1.0",
+          "itchIo": "itch.io",
+          "download": "Download"
         }
       },
       "guides": {
         "title": "Guides",
         "items": {
           "all": "All Guides",
-          "download": "Download Guide",
-          "itchIo": "itch.io Page",
-          "contentWarnings": "Content Warnings",
+          "beginner": "Beginner Guide",
+          "spells": "Spells",
+          "research": "Research",
+          "rituals": "Rituals"
+        }
+      },
+      "official": {
+        "title": "Official",
+        "items": {
+          "discord": "Discord",
+          "mobile": "Mobile Safety",
           "disclaimer": "Disclaimer"
         }
       },

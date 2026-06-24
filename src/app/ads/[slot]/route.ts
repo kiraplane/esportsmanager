@@ -9,7 +9,7 @@ import {
 export const dynamic = 'force-dynamic';
 
 const VALID_ADSTERRA_KEY = /^[a-z0-9]+$/i;
-const AD_FRAME_BACKGROUND = '#0A0F0C';
+const AD_FRAME_BACKGROUND = '#08100D';
 
 function normalizeSlot(value: string): AdsterraSlotId | null {
   const slot = value.replace(/.html$/, '') as AdsterraSlotId;

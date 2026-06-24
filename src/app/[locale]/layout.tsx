@@ -43,26 +43,37 @@ const CLIENT_MESSAGE_NAMESPACES = [
 const MARKETING_NAVBAR_KEYS = [
   'home',
   'play',
-  'allEndings',
-  'ending20',
-  'silasRoute',
-  'miniGames',
   'guides',
+  'spells',
+  'research',
+  'steam',
   'download',
-  'contentWarnings',
+  'discord',
 ] as const;
 
 const MARKETING_FOOTER_KEYS = [
   'tagline',
-  'walkthrough',
+  'play',
   'guides',
+  'official',
   'legal',
 ] as const;
 const MARKETING_FOOTER_GUIDE_ITEM_KEYS = [
   'all',
-  'download',
+  'beginner',
+  'spells',
+  'research',
+  'rituals',
+] as const;
+const MARKETING_FOOTER_PLAY_ITEM_KEYS = [
+  'online',
+  'steam',
   'itchIo',
-  'contentWarnings',
+  'download',
+] as const;
+const MARKETING_FOOTER_OFFICIAL_ITEM_KEYS = [
+  'discord',
+  'mobile',
   'disclaimer',
 ] as const;
 
@@ -79,13 +90,31 @@ function pickKeys<T extends MessageMap, K extends readonly string[]>(
 
 function pickMarketingFooter(footer: MessageMap | undefined) {
   const selectedFooter = pickKeys(footer, MARKETING_FOOTER_KEYS) as MessageMap;
+  const play = selectedFooter.play as MessageMap | undefined;
+  const playItems = play?.items as MessageMap | undefined;
   const guides = selectedFooter.guides as MessageMap | undefined;
   const guideItems = guides?.items as MessageMap | undefined;
+  const official = selectedFooter.official as MessageMap | undefined;
+  const officialItems = official?.items as MessageMap | undefined;
+
+  if (play && playItems) {
+    selectedFooter.play = {
+      ...play,
+      items: pickKeys(playItems, MARKETING_FOOTER_PLAY_ITEM_KEYS),
+    };
+  }
 
   if (guides && guideItems) {
     selectedFooter.guides = {
       ...guides,
       items: pickKeys(guideItems, MARKETING_FOOTER_GUIDE_ITEM_KEYS),
+    };
+  }
+
+  if (official && officialItems) {
+    selectedFooter.official = {
+      ...official,
+      items: pickKeys(officialItems, MARKETING_FOOTER_OFFICIAL_ITEM_KEYS),
     };
   }
 

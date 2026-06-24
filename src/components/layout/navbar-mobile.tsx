@@ -90,7 +90,7 @@ export function NavbarMobile({
             aria-label="Toggle Mobile Menu"
             onClick={handleToggleMobileMenu}
             className="size-8 flex aspect-square h-fit cursor-pointer select-none items-center
-              justify-center rounded-md border border-[#493A34] text-[#F7E8C9]"
+              justify-center rounded-md border border-[#4B6B66] text-[#F3EDE1]"
           >
             {open ? (
               <XIcon className="size-4" />
@@ -128,7 +128,7 @@ function MainMobileMenu({ onLinkClicked }: MainMobileMenuProps) {
   return (
     <div
       className="fixed w-full inset-0 z-50 mt-[64px] overflow-y-auto
-      border-[#493A34] border-t bg-[#0A0F0C] text-foreground backdrop-blur-md animate-in fade-in-0"
+      border-[#4B6B66] border-t bg-[#08100D] text-foreground backdrop-blur-md animate-in fade-in-0"
     >
       <div className="size-full flex flex-col items-start space-y-4 pt-4">
         {/* main menu */}

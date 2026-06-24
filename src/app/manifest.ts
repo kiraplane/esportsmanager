@@ -23,12 +23,12 @@ import type { MetadataRoute } from 'next';
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: defaultMessages.Metadata.name,
-    short_name: 'False Sun Wiki',
+    short_name: 'Orb Wiki',
     description: defaultMessages.Metadata.description,
     start_url: '/',
     display: 'standalone',
-    background_color: '#0A0F0C',
-    theme_color: '#D9B56A',
+    background_color: '#111915',
+    theme_color: '#FFB68A',
     icons: [
       {
         src: '/favicon-32x32.png',

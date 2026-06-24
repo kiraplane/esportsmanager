@@ -11,7 +11,7 @@ export default function Container({
 }) {
   // add mx-auto to make it center
   return (
-    <div className={cn('container', 'mx-auto max-w-7xl', className)}>
+    <div className={cn('container', 'mx-auto w-full max-w-7xl', className)}>
       {children}
     </div>
   );

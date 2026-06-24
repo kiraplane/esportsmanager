@@ -1,17 +1,15 @@
-# The False Sun Wiki
+# Orb of Creation Wiki
 
-Unofficial fan-made play-online and walkthrough site for Oniray's visual novel
-The False Sun.
+Unofficial fan-made wiki, guide, and browser play site for MarpleGames'
+incremental puzzle game Orb of Creation.
 
 The site is built on the existing Next.js / MkSaaS stack and focuses on:
 
-- All endings and gallery cleanup
 - Browser play page at `/play-online`
-- Ending 20 / rare chicken accident route notes
-- Silas route and Kyle route walkthroughs
-- Farm mini-games and save-point advice
-- Official itch.io download guidance
-- Mature-content and spoiler warnings
+- Beginner guide and systems pages for spells, research, rituals, alchemy, and Druidry
+- Steam 1.0 release and official download guidance
+- itch.io, Discord, and mobile/APK safety pages
+- English SEO pages for long-tail Orb of Creation search demand
 
 ## Development
 
@@ -25,15 +23,13 @@ pnpm build
 The production domain is:
 
 ```txt
-https://www.thefalsesun.wiki
+https://www.orbofcreation.wiki
 ```
 
 ## Content Rules
 
-- Do not turn this into a generic codes, tier-list, or database wiki.
-- Do not publish explicit adult scene walkthroughs or copied game script.
-- Treat route labels as unofficial until direct replay verification confirms them.
-- Prefer official itch.io information and clearly labeled community/video cross-checks.
-- Do not recommend unsafe APKs, modified clients, cheats, or script workarounds.
-- Keep the site clearly labeled as an unofficial fan-made walkthrough.
-- Keep downloadable builds pointed to itch.io.
+- Keep the site clearly labeled as an unofficial fan-made wiki.
+- Prefer official Steam, itch.io, Discord, and MarpleGames information.
+- Do not recommend unsafe APKs, modified clients, save editors, cheats, or copied paid Steam files.
+- Use guide videos only as supporting references; write original, decision-first guide copy.
+- Treat mechanics as version-sensitive and update pages when Orb of Creation changes.

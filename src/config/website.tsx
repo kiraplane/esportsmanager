@@ -20,8 +20,7 @@ export const websiteConfig: WebsiteConfig = {
   },
   metadata: {
     images: {
-      ogImage:
-        'https://img.itch.zone/aW1nLzI3NTUxNjgxLmpwZw==/original/96%2Fy%2FZ.jpg',
+      ogImage: '/orbofcreation/orb-of-creation-og.png',
       logoLight: '/logo.png',
       logoDark: '/logo.png',
     },
@@ -60,30 +59,9 @@ export const websiteConfig: WebsiteConfig = {
     defaultLocale: 'en',
     locales: {
       en: {
-        flag: '🇺🇸',
+        flag: '🟣',
         name: 'English',
         hreflang: 'en-US',
-      },
-      ru: {
-        flag: '🇷🇺',
-        name: 'Русский',
-        hreflang: 'ru-RU',
-      },
-      'pt-BR': {
-        flag: '🇧🇷',
-        name: 'Português',
-        hreflang: 'pt-BR',
-      },
-      es: {
-        flag: '🇪🇸',
-        name: 'Español',
-        hreflang: 'es',
-      },
-
-      id: {
-        flag: '🇮🇩',
-        name: 'Bahasa Indonesia',
-        hreflang: 'id-ID',
       },
     },
   },
@@ -97,8 +75,8 @@ export const websiteConfig: WebsiteConfig = {
   },
   mail: {
     provider: 'resend',
-    fromEmail: 'The False Sun <hello@thefalsesun.wiki>',
-    supportEmail: 'hello@thefalsesun.wiki',
+    fromEmail: 'Orb of Creation <hello@orbofcreation.wiki>',
+    supportEmail: 'hello@orbofcreation.wiki',
   },
   newsletter: {
     enable: false,
