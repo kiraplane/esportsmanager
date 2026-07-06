@@ -140,6 +140,100 @@ export const guides: Guide[] = [
     ],
   },
   {
+    slug: 'characters-guide',
+    path: '/guides/characters-guide',
+    title: 'Feed The Pit Characters Guide',
+    seoTitle: 'Feed The Pit Characters Guide - Targets, Monsters, and Roles',
+    seoDescription:
+      'Understand Feed The Pit characters by role: wealthy targets, mission monsters, valley residents, the pit, and how each one changes Act 1 decisions.',
+    summary:
+      'Feed The Pit characters matter most by the job they create for you: identify a target, survive a monster, read the valley, and decide how far to serve the pit.',
+    category: 'Mechanics',
+    difficulty: 'Beginner',
+    coverImageUrl: screenshotCover('feed-the-pit-investigation.jpg'),
+    publishedAt: checkedAt,
+    updatedAt: checkedAt,
+    sourceStrategy: 'manual_data',
+    videoSearchQueries: [
+      'Feed The Pit characters',
+      'Feed The Pit Act 1 characters',
+      'Feed The Pit monster guide',
+    ],
+    sourceNotes:
+      'Added from GSC character-query demand and cross-checked against the Steam premise, Act 1 launch wording, and existing monster/card pages.',
+    tags: ['Characters', 'Act 1', 'Monsters'],
+    relatedRoutes: [
+      '/monsters',
+      '/cards',
+      '/guides/beginner-guide',
+      '/guides/act-1-walkthrough',
+    ],
+    body: [
+      {
+        heading: 'Read characters by the problem they create',
+        paragraphs: [
+          'Feed The Pit is not a party-RPG character roster. In Act 1, the useful way to think about characters is by role: a target you need to identify, a monster that pressures the mission, people and clues around Carrister Valley, and the pit that turns the whole investigation into a cost-benefit choice.',
+          'That distinction matters because a fake character list would not help a run. A player-friendly guide should answer what each role changes in your decisions: which cards to spend, when to move, when to save an item, and when a clean answer is worth more than a perfect rank.',
+        ],
+      },
+      {
+        heading: 'Wealthy targets are your investigation objective',
+        paragraphs: [
+          'Steam describes the core loop as hunting wealthy individuals through a dangerous card game. Treat the target as a logic problem first. Your cards narrow down the map; the target is the final answer, not something you should guess early because a location looks suspicious.',
+          'When you review a target lead, ask which card result supports it. If the answer is only "it feels right," keep narrowing. The strongest target read is one where every remaining card either confirms the location or removes the closest alternative.',
+        ],
+        bullets: [
+          'Use broad cards while many locations are still possible.',
+          'Save precise cards until the final candidates are small.',
+          'Do not let monster pressure turn an unsupported guess into a decision.',
+        ],
+      },
+      {
+        heading: 'Mission monsters decide your safety rhythm',
+        paragraphs: [
+          'The monster role is different from the target role. Targets answer the card puzzle; monsters decide how safely you can keep solving it. Steam frames each mission around relentless horrors, so the right habit is to learn what kind of pressure the current monster creates before spending every escape tool.',
+          'In practical terms, you should separate information turns from survival turns. If a monster forces you to move, protect the route first. If it mainly punishes delay, stop over-checking the map and commit once the evidence is good enough.',
+        ],
+        bullets: [
+          'Track what triggered the danger before using an item.',
+          'Keep one safety resource for the final route whenever possible.',
+          'Use the monsters page for behavior-reading notes before chasing ranks.',
+        ],
+      },
+      {
+        heading: 'The pit is the pressure behind every choice',
+        paragraphs: [
+          'The pit is not just a title object. It is the reason you keep accepting dangerous hunts, and it is the force that makes efficient play feel morally uncomfortable. That is why a good Act 1 route should not only ask "can I clear this?" but also "what did I spend to clear this?"',
+          'If you are learning the story, keep one run spoiler-light and treat rank goals as optional. If you are replaying, the pit becomes a planning constraint: fewer wasted cards, cleaner movement, and less panic spending make the same mission feel very different.',
+        ],
+      },
+      {
+        heading: 'What to update when new acts arrive',
+        paragraphs: [
+          'Act 1 is the public launch boundary right now, while Steam says Acts 2 and 3 are planned as free updates. When new acts release, this page should expand named-character coverage only where the game itself makes those names useful for choices, routes, endings, or monster behavior.',
+          'Until then, this page should stay role-first. That keeps it useful for players searching "Feed The Pit characters" without pretending that a full cast database exists before the game exposes enough stable detail.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Does Feed The Pit have a full character list?',
+        answer:
+          'Not enough stable public Act 1 detail exists for a reliable full cast database. This guide tracks the important role types first: targets, monsters, valley clues, and the pit.',
+      },
+      {
+        question: 'Are monsters characters or mechanics?',
+        answer:
+          'Both for guide purposes. A monster is a character-like threat, but the useful part is its behavior pattern and how it changes card timing, movement, and item use.',
+      },
+      {
+        question: 'Will this page change after Acts 2 and 3?',
+        answer:
+          'Yes. Steam says Acts 2 and 3 will arrive as free updates, so named-character sections should be added only after those routes are public and source-checkable.',
+      },
+    ],
+  },
+  {
     slug: 'play-online',
     path: '/play-online',
     title: 'Feed The Pit Play Online',

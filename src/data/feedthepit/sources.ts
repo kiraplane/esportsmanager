@@ -1,6 +1,6 @@
 import type { DataSource, GameFact, KeywordMatrixItem } from './types';
 
-export const checkedAt = '2026-07-02';
+export const checkedAt = '2026-07-06';
 
 export const siteFacts = {
   siteName: 'Feed The Pit',
@@ -231,6 +231,18 @@ export const keywordMatrix: KeywordMatrixItem[] = [
       'Steam describes a new monster each mission; YouTube/Steam reviews mention enemy uniqueness.',
     notes:
       'Use behavior-reading principles instead of unverified monster table.',
+  },
+  {
+    keyword: 'Feed The Pit characters',
+    intent:
+      'Understand who matters in the investigation loop: targets, mission monsters, valley residents, and the pit itself.',
+    route: '/guides/characters-guide',
+    priority: 'P1',
+    status: 'keep',
+    evidence:
+      'GSC shows clicked character demand, while Steam frames the game around wealthy targets, magical card hunts, mission monsters, and the pit.',
+    notes:
+      'Use role-based character guidance because official named-character data is still limited at Act 1 launch.',
   },
   {
     keyword: 'Feed The Pit walkthrough',
