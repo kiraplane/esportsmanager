@@ -12,7 +12,7 @@ export async function generateMetadata({
   return constructMetadata({
     title: 'Moonlight Peaks Item Tracker - Crops, Tools, Flowers, Resources',
     description:
-      'Track Moonlight Peaks crops, flowers, tools, animals, resources, and recipes locally while live-game data is verified.',
+      'Track Moonlight Peaks crops, flowers, tools, animals, resources, and recipes locally while your collection grows.',
     locale,
     pathname: '/tools/item-tracker',
   });

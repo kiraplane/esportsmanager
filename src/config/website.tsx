@@ -28,10 +28,10 @@ export const websiteConfig: WebsiteConfig = {
       github: '',
       twitter: '',
       blueSky: '',
-      discord: 'https://discord.com/invite/heWNF8A8Aw',
+      discord: '',
       mastodon: '',
       linkedin: '',
-      youtube: 'https://www.youtube.com/@XSEEDgames',
+      youtube: '',
     },
   },
   features: {

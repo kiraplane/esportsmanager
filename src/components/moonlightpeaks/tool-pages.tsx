@@ -66,7 +66,7 @@ const toolCards = [
     href: '/tools/farming-profit-calculator',
     icon: Calculator,
     body: 'Compare manual crop scenarios by seed cost, sell value, growth days, harvest count, and extra cost.',
-    tags: ['Crops', 'Profit/day', 'Manual data'],
+    tags: ['Crops', 'Profit/day', 'Manual values'],
   },
 ] as const;
 
@@ -76,7 +76,7 @@ export function ToolsLandingPage({ locale }: { locale?: Locale }) {
       currentPath="/tools"
       locale={locale}
       title="Moonlight Peaks Tools"
-      intro="Interactive player helpers inspired by competitor tool patterns, rebuilt for this site with source-aware data and local-only saves."
+      intro="Interactive player helpers for platform choice, romance notes, item checklists, and farming math with local-only saves."
     >
       <section className="grid gap-4 md:grid-cols-2">
         {toolCards.map((tool) => {
@@ -123,13 +123,11 @@ export function ToolsLandingPage({ locale }: { locale?: Locale }) {
         <div className="flex gap-3">
           <ShieldCheck className="mt-1 size-5 shrink-0 text-[#5EE6D6]" />
           <div>
-            <h2 className="font-display text-2xl font-bold">
-              Tool data policy
-            </h2>
+            <h2 className="font-display text-2xl font-bold">Tool privacy</h2>
             <p className="mt-2 text-sm leading-7 text-[#DED2F6]">
-              These tools separate verified facts from player-entered
-              experiments. Shortlists and checklists stay in localStorage, so
-              they are private to your browser and can be reset any time.
+              These tools separate game fields from player-entered experiments.
+              Shortlists and checklists stay in localStorage, so they are
+              private to your browser and can be reset any time.
             </p>
           </div>
         </div>
@@ -234,7 +232,7 @@ function ToolShell({
                   </h2>
                   <p className="mt-2 text-sm leading-6 text-[#DED2F6]">
                     Use tools for planning and private notes. Exact gifts,
-                    prices, and schedules should still be verified in-game.
+                    prices, and schedules should still be checked in your save.
                   </p>
                   <Button
                     asChild

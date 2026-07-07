@@ -176,7 +176,7 @@ export const databaseCategoryMeta: Record<
     shortTitle: 'Characters',
     route: '/database/characters',
     description:
-      'Residents, romance status, species, families, birthdays, jobs, portrait availability, and verification notes.',
+      'Residents, romance status, species, families, birthdays, jobs, portraits, and planning notes.',
     sourceNote:
       'Character fields are cross-checked from wiki.gg infoboxes, competitor character hubs, and public official/store facts where available.',
   },
@@ -186,7 +186,7 @@ export const databaseCategoryMeta: Record<
     shortTitle: 'Families',
     route: '/database/families',
     description:
-      'The seven-family structure, known supernatural inclinations, members, and launch verification gaps.',
+      'The seven-family structure, known supernatural inclinations, members, and launch planning gaps.',
     sourceNote:
       'Family groupings use official seven-family framing plus wiki.gg/Fandom page names and competitor family pages.',
   },
@@ -652,7 +652,7 @@ export const characters: CharacterEntry[] = [
     imageStatus: 'icon-listed',
     imageFile: 'Persephone (icon).png',
     summary:
-      'A Henderson resident currently represented by icon-level wiki data.',
+      'A Henderson resident with a lighter profile and icon-style artwork.',
     notes: ['No reliable gifts, birthday, or schedule data yet.'],
     sourcePages: ['https://moonlightpeaks.wiki.gg/wiki/Persephone'],
   },
@@ -667,7 +667,7 @@ export const characters: CharacterEntry[] = [
     verification: 'wiki-data',
     imageStatus: 'icon-listed',
     imageFile: 'Winston (icon).png',
-    summary: 'A Henderson resident whose public data is still sparse.',
+    summary: 'A Henderson resident whose known role details are still sparse.',
     notes: ['Use only as an index row until more confirmed details appear.'],
     sourcePages: ['https://moonlightpeaks.wiki.gg/wiki/Winston'],
   },
@@ -698,7 +698,7 @@ export const characters: CharacterEntry[] = [
     verification: 'wiki-data',
     imageStatus: 'none',
     summary:
-      'A named resident/page lead from wiki.gg and Fandom, useful for future jobs, quests, or relationship expansion.',
+      'A lightly documented resident who may become useful for future jobs, quests, or relationship expansion.',
     notes: ['Profile fields and romance status are not reliable enough yet.'],
     sourcePages: [
       'https://moonlightpeaks.wiki.gg/wiki/Albertus',
@@ -715,7 +715,7 @@ export const characters: CharacterEntry[] = [
     verification: 'wiki-data',
     imageStatus: 'none',
     summary:
-      'A Logan-family page lead surfaced by wiki.gg and Fandom, kept as a watch row until profile details are stronger.',
+      'A lightly documented Logan-family resident kept as a watch row until profile details are stronger.',
     notes: [
       'Potential family member; do not treat as a confirmed romance route.',
     ],
@@ -734,7 +734,7 @@ export const characters: CharacterEntry[] = [
     verification: 'wiki-data',
     imageStatus: 'none',
     summary:
-      'A named page lead present in both wiki inventories, pending stronger role, schedule, or shop data.',
+      'A lightly documented resident pending stronger role, schedule, or shop detail.',
     notes: ['Keep as discovered data rather than a finished profile.'],
     sourcePages: [
       'https://moonlightpeaks.wiki.gg/wiki/Chester',
@@ -751,7 +751,7 @@ export const characters: CharacterEntry[] = [
     verification: 'wiki-data',
     imageStatus: 'none',
     summary:
-      'A Fandom character page lead also reflected by competitor character inventories.',
+      'A lightly documented Spectra resident with family and species details still to fill in.',
     notes: [
       'Family and species classification should be verified before use in guides.',
     ],
@@ -770,7 +770,7 @@ export const characters: CharacterEntry[] = [
     verification: 'wiki-data',
     imageStatus: 'none',
     summary:
-      'A named character/page lead from Fandom and competitor listings, likely useful for seasonal or town-context coverage.',
+      'A named resident likely useful for seasonal or town-context coverage.',
     notes: ['Treat role and relationship status as unverified.'],
     sourcePages: [
       'https://moonlightpeaks.fandom.com/wiki/Pumpkin_Head',
@@ -787,7 +787,7 @@ export const characters: CharacterEntry[] = [
     verification: 'wiki-data',
     imageStatus: 'none',
     summary:
-      'A named Fandom page lead worth tracking for quests, shops, or resident interactions.',
+      'A named resident worth tracking for quests, shops, or resident interactions.',
     notes: ['No reliable birthday, family, or romance fields yet.'],
     sourcePages: ['https://moonlightpeaks.fandom.com/wiki/Mr._Deyes'],
   },
@@ -801,7 +801,7 @@ export const characters: CharacterEntry[] = [
     verification: 'wiki-data',
     imageStatus: 'none',
     summary:
-      'A named Fandom page lead kept in the database for later in-game verification.',
+      'A lightly documented resident kept in the database for later playthrough checks.',
     notes: [
       'Could become a quest or resident row after more evidence appears.',
     ],
@@ -817,7 +817,7 @@ export const characters: CharacterEntry[] = [
     verification: 'wiki-data',
     imageStatus: 'none',
     summary:
-      'A named page lead from Fandom, currently too sparse for guide claims.',
+      'A lightly documented resident whose role details are still sparse.',
     notes: ['Keep in watch status until profile details are available.'],
     sourcePages: ['https://moonlightpeaks.fandom.com/wiki/Jacques'],
   },
@@ -831,7 +831,7 @@ export const characters: CharacterEntry[] = [
     verification: 'wiki-data',
     imageStatus: 'none',
     summary:
-      'A Fandom character page lead that should be revisited when more route or location context exists.',
+      'A lightly documented resident to revisit when more route or location context exists.',
     notes: ['No hard relationship claims yet.'],
     sourcePages: ['https://moonlightpeaks.fandom.com/wiki/Llemi'],
   },
@@ -845,7 +845,7 @@ export const characters: CharacterEntry[] = [
     verification: 'wiki-data',
     imageStatus: 'none',
     summary:
-      'A named Fandom page lead, useful as a future critter, resident, or quest index row once verified.',
+      'A named entry that may become a future critter, resident, or quest index row.',
     notes: ['Classification is intentionally conservative.'],
     sourcePages: ['https://moonlightpeaks.fandom.com/wiki/Snek'],
   },
@@ -1054,7 +1054,7 @@ export const locations: LocationEntry[] = [
     kind: 'Wilds',
     verification: 'datamined',
     summary:
-      'A named wooded area that appears in wiki pages and competitor landmark lists.',
+      'A named wooded area suited to later forage, route, or event notes.',
     relatedCharacters: ['Fiona', 'Luna'],
     sourcePages: [
       'https://moonlightpeaks.wiki.gg/wiki/Moonlit_Pines',
@@ -1118,8 +1118,7 @@ export const locations: LocationEntry[] = [
     name: 'Moonlight Tower',
     kind: 'Landmark',
     verification: 'datamined',
-    summary:
-      'A tower landmark listed in wiki/competitor data, with exact purpose still unknown.',
+    summary: 'A tower landmark with exact purpose still unknown.',
     relatedCharacters: [],
     sourcePages: [
       'https://moonlightpeaks.wiki.gg/wiki/Moonlight_Tower',
@@ -1144,8 +1143,7 @@ export const locations: LocationEntry[] = [
     name: 'Ambrosia Mansion',
     kind: 'Family place',
     verification: 'datamined',
-    summary:
-      'A likely vampire-family estate name paired with Ambrosia Graveyard in source data.',
+    summary: 'A likely vampire-family estate paired with Ambrosia Graveyard.',
     relatedCharacters: ['Ambrosia family'],
     sourcePages: ['https://moonlightpeaks.wiki.gg/wiki/Ambrosia_Mansion'],
   },
@@ -1190,7 +1188,7 @@ export const locations: LocationEntry[] = [
     kind: 'Town hub',
     verification: 'reported',
     summary:
-      'A competitor-listed town subarea likely used for navigation, shops, and resident routing.',
+      'A town subarea likely used for navigation, shops, and resident routing.',
     relatedCharacters: ['Town residents'],
     sourcePages: ['https://moonlightpeakswiki.com/locations/town-square'],
   },
@@ -1200,7 +1198,7 @@ export const locations: LocationEntry[] = [
     kind: 'Wilds',
     verification: 'reported',
     summary:
-      'A competitor-listed exploration area for gathering, travel, and later location-specific guides.',
+      'An exploration area for gathering, travel, and later location-specific guides.',
     relatedCharacters: [],
     sourcePages: ['https://moonlightpeakswiki.com/locations/forest'],
   },
@@ -1210,7 +1208,7 @@ export const locations: LocationEntry[] = [
     kind: 'Water',
     verification: 'reported',
     summary:
-      'A competitor-listed water location likely relevant to fishing, mermaids, and lake-side gathering.',
+      'A water location likely relevant to fishing, mermaids, and lake-side gathering.',
     relatedCharacters: ['Hosu family'],
     sourcePages: ['https://moonlightpeakswiki.com/locations/lake'],
   },
@@ -1220,7 +1218,7 @@ export const locations: LocationEntry[] = [
     kind: 'Water',
     verification: 'reported',
     summary:
-      'A competitor-listed water-side location to verify for fishing access, events, or resident schedules.',
+      'A water-side location to check for fishing access, events, or resident schedules.',
     relatedCharacters: [],
     sourcePages: ['https://moonlightpeakswiki.com/locations/pier'],
   },
@@ -1229,8 +1227,7 @@ export const locations: LocationEntry[] = [
     name: 'Silverveil Lake',
     kind: 'Water',
     verification: 'wiki-data',
-    summary:
-      'A wiki.gg page-title location lead that should be cross-checked against fishing and mermaid routes.',
+    summary: 'A lake area to check against fishing and mermaid routes.',
     relatedCharacters: ['Hosu family'],
     sourcePages: ['https://moonlightpeaks.wiki.gg/wiki/Silverveil_Lake'],
   },
@@ -1240,7 +1237,7 @@ export const locations: LocationEntry[] = [
     kind: 'Shop',
     verification: 'wiki-data',
     summary:
-      'A wiki.gg page-title shop lead that may connect to flowers, clothing, gifts, or decoration systems.',
+      'A shop entry that may connect to flowers, clothing, gifts, or decoration systems.',
     relatedCharacters: [],
     sourcePages: ['https://moonlightpeaks.wiki.gg/wiki/Bloom_Boutique'],
   },
@@ -1250,7 +1247,7 @@ export const locations: LocationEntry[] = [
     kind: 'Activity',
     verification: 'wiki-data',
     summary:
-      'A wiki.gg page-title activity/location lead, kept separate from confirmed shops until more details are available.',
+      'An activity or location entry kept separate from shops until more details are available.',
     relatedCharacters: [],
     sourcePages: ['https://moonlightpeaks.wiki.gg/wiki/Yoga_Shack'],
   },
@@ -1260,7 +1257,7 @@ export const locations: LocationEntry[] = [
     kind: 'Residence / hidden place',
     verification: 'wiki-data',
     summary:
-      'A wiki.gg page-title location lead that may connect to Sabrina, magic, or hidden-map progression.',
+      'A hidden-location entry that may connect to Sabrina, magic, or map progression.',
     relatedCharacters: ['Sabrina'],
     sourcePages: [
       'https://moonlightpeaks.wiki.gg/wiki/Sabrina%27s_Hidden_Hollow',
@@ -1332,7 +1329,7 @@ export const items: ItemEntry[] = [
       category: 'Flower',
       verification: 'wiki-data',
       summary:
-        'Flower entry useful for gifting, flower arranging, decoration, or collection tracking once reactions are verified.',
+        'Flower entry useful for gifting, flower arranging, decoration, or collection tracking once reactions are known.',
       trackerGroup: 'Flowers',
       sourcePages: [
         `https://moonlightpeaks.wiki.gg/wiki/${encodeWikiTitle(name)}`,
@@ -1366,7 +1363,7 @@ export const items: ItemEntry[] = [
       category: 'Tool / workstation',
       verification: 'wiki-data',
       summary:
-        'Tool or workstation entry. Use it for checklist tracking first; recipes, placement rules, and upgrades need verification.',
+        'Tool or workstation entry. Use it for checklist tracking first, then add recipes, placement rules, and upgrades from your save.',
       trackerGroup: 'Tools',
       sourcePages: [
         `https://moonlightpeaks.wiki.gg/wiki/${encodeWikiTitle(name)}`,
@@ -1454,7 +1451,7 @@ export const items: ItemEntry[] = [
       category: 'Cooking / processed',
       verification: 'wiki-data',
       summary:
-        'Processed food or drink entry. Profit, recipe inputs, and gift value should be verified before publishing hard numbers.',
+        'Processed food or drink entry. Profit, recipe inputs, and gift value should be tested before using hard numbers.',
       trackerGroup: 'Recipes',
       sourcePages: [
         `https://moonlightpeaks.wiki.gg/wiki/${encodeWikiTitle(name)}`,

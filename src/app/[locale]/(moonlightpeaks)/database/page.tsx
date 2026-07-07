@@ -12,7 +12,7 @@ export async function generateMetadata({
   return constructMetadata({
     title: 'Moonlight Peaks Database - Characters, Families, Locations, Items',
     description:
-      'Browse Moonlight Peaks structured data for characters, families, locations, items, tools, images, and source verification status.',
+      'Browse Moonlight Peaks structured data for characters, families, locations, items, tools, and local artwork.',
     locale,
     pathname: '/database',
   });

@@ -74,7 +74,7 @@ export function FarmingProfitCalculatorTool() {
               </h2>
               <p className="mt-1 text-sm leading-6 text-[#DED2F6]">
                 Enter values from your own save. This avoids publishing guessed
-                crop prices before verified tables exist.
+                crop prices before finished crop tables exist.
               </p>
             </div>
           </div>

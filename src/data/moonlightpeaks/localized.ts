@@ -114,7 +114,7 @@ export function getHomeContent(_locale?: Locale | string): HomeContent {
     primaryCta: 'Start beginner guide',
     secondaryCta: 'Choose platform',
     scopeNote:
-      'Built from official Steam, Moonlight Peaks, Nintendo, Google Play, YouTube, Reddit, and launch-week search demand checked on July 7, 2026.',
+      'Updated for the July 2026 launch window with platform, romance, farming, magic, database, and tool coverage.',
     siteShapeEyebrow: 'Launch coverage',
     siteShapeTitle: 'Built around what new vampires search first',
     siteShapeBody:

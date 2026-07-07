@@ -12,7 +12,7 @@ export async function generateMetadata({
   return constructMetadata({
     title: 'Moonlight Peaks Families Database - Ambrosia, Logan, Webb, Hosu',
     description:
-      'Track Moonlight Peaks families, supernatural inclinations, known members, and verification notes for romance and town routing.',
+      'Track Moonlight Peaks families, supernatural inclinations, known members, and local crest artwork for romance and town routing.',
     locale,
     pathname: '/database/families',
   });

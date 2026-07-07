@@ -12,7 +12,7 @@ export async function generateMetadata({
   return constructMetadata({
     title: 'Moonlight Peaks Characters Database - Romance, Families, Birthdays',
     description:
-      'Moonlight Peaks character database with species, family, romance status, birthdays, jobs, portraits, and source confidence.',
+      'Moonlight Peaks character database with species, family, romance status, birthdays, jobs, portraits, and local artwork.',
     locale,
     pathname: '/database/characters',
   });
