@@ -3,7 +3,6 @@
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import type { ItemEntry } from '@/data/moonlightpeaks/database';
-import { getVerificationLabel } from '@/data/moonlightpeaks/database';
 import { Check, RotateCcw, Search } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -141,12 +140,6 @@ export function ItemTrackerTool({ items }: { items: ItemEntry[] }) {
                   className="border-[#4B315F] bg-[#120719] text-[#DED2F6]"
                 >
                   {item.category}
-                </Badge>
-                <Badge
-                  variant="outline"
-                  className="border-[#4B315F] bg-[#120719] text-[#DED2F6]"
-                >
-                  {getVerificationLabel(item.verification)}
                 </Badge>
               </div>
             </button>
