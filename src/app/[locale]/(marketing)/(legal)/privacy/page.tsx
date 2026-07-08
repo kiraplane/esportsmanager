@@ -10,9 +10,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return constructMetadata({
-    title: 'Privacy Policy | Moonlight Peaks Wiki',
+    title: 'Privacy Policy | Esports Manager 2026 Wiki',
     description:
-      'Privacy policy for Moonlight Peaks Wiki, an independent guide site.',
+      'Privacy policy for Esports Manager 2026 Wiki, an independent guide site.',
     locale,
     pathname: '/privacy',
   });
@@ -20,26 +20,26 @@ export async function generateMetadata({
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="bg-[#120719] py-12 text-[#F4EAFE]">
+    <div className="bg-[#061018] py-12 text-[#EAF7FF]">
       <Container className="max-w-3xl space-y-6 px-4">
         <h1 className="font-display text-4xl font-black">Privacy Policy</h1>
-        <p className="leading-8 text-[#DED2F6]">
-          Moonlight Peaks Wiki is an independent guide site. We do not require
-          accounts for browsing the wiki, platform pages, relationship guides,
-          farming guides, or official-link pages.
+        <p className="leading-8 text-[#A8C7D8]">
+          Esports Manager 2026 Wiki is an independent guide site. We do not
+          require accounts for browsing the wiki, platform pages, roster guides,
+          tactics guides, EMDB notes, or official-link pages.
         </p>
-        <p className="leading-8 text-[#DED2F6]">
+        <p className="leading-8 text-[#A8C7D8]">
           Standard analytics or hosting logs may record aggregate traffic data
           such as page views, referrers, device type, and approximate region. We
           use this to improve guides and fix broken pages.
         </p>
-        <p className="leading-8 text-[#DED2F6]">
+        <p className="leading-8 text-[#A8C7D8]">
           Remote media may be loaded from official storefronts or YouTube when a
           page embeds official artwork, store links, screenshots, or guide
           videos.
         </p>
-        <p className="leading-8 text-[#DED2F6]">
-          Privacy questions can be sent to hello@moonlightpeaks.org.
+        <p className="leading-8 text-[#A8C7D8]">
+          Privacy questions can be sent to hello@esportsmanager.wiki.
         </p>
       </Container>
     </div>

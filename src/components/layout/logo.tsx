@@ -6,11 +6,11 @@ import Image from 'next/image';
 export function Logo({ className }: { className?: string }) {
   return (
     <span
-      aria-label="Moonlight Peaks logo"
-      title="Moonlight Peaks"
+      aria-label="Esports Manager 2026 logo"
+      title="Esports Manager 2026"
       className={cn(
         'relative inline-flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-md',
-        'border border-[#C77DFF]/60 bg-[#120719] shadow-[0_0_30px_rgba(199,125,255,0.24)]',
+        'border border-[#59D6FF]/60 bg-[#061018] shadow-[0_0_30px_rgba(89,214,255,0.2)]',
         className
       )}
     >

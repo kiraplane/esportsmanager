@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Moonlight Peaks - investigative horror guide theme */
+/* Esports Manager 2026 - competitive management guide theme */
 
 :root {
   --font-noto-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -17,9 +17,8 @@
  * Galmuri — open-source Korean pixel font family by Quiple (SIL OFL 1.1).
  * Source: https://github.com/quiple/galmuri
  *
- * Galmuri11 → body-display sizes (16-32px), Galmuri14 → hero/headline sizes (40px+).
- * Both have full Latin coverage so we use them for English headings as well, giving
- * kept here from the starter theme but overridden below for this guide site.
+ * The starter bundled these font faces for display experiments. The active site
+ * theme below maps display text back to the project's sans stack for readability.
  */
 @font-face {
   font-family: "Galmuri11";
@@ -54,12 +53,7 @@
 }
 
 /*
- * Display utility — pixel font for headings, brand wordmarks, eyebrows, kickers.
- * Body copy and small UI keep the project's sans defaults for legibility (pixel
- * fonts at ≤14px are noise walls).
- *
- * Use:  className="font-display"            → Galmuri11, ~16-32px sweet spot
- *       className="font-display-lg"         → Galmuri14, ~40px+ display sizes
+ * Display utility for headings, brand wordmarks, eyebrows, and kickers.
  */
 .font-display {
   font-family: var(--font-pixel);
@@ -389,7 +383,7 @@ body {
 }
 
 /*
- * Moonlight Peaks theme colors
+ * Esports Manager 2026 theme colors
  */
 .theme-default {
   --primary: #e3483b;

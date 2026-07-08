@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
-  "name": "moonlightpeaks",
+  "name": "esportsmanager",
   "workers_dev": true,
   "preview_urls": true,
   "keep_vars": true,
@@ -13,14 +13,14 @@
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "routes": [
     {
-      "pattern": "moonlightpeaks.org",
+      "pattern": "esportsmanager.wiki",
       "custom_domain": true,
-      "zone_name": "moonlightpeaks.org"
+      "zone_name": "esportsmanager.wiki"
     },
     {
-      "pattern": "www.moonlightpeaks.org",
+      "pattern": "www.esportsmanager.wiki",
       "custom_domain": true,
-      "zone_name": "moonlightpeaks.org"
+      "zone_name": "esportsmanager.wiki"
     }
   ],
   "build": {

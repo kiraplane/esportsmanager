@@ -10,9 +10,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return constructMetadata({
-    title: 'Terms of Service | Moonlight Peaks Wiki',
+    title: 'Terms of Service | Esports Manager 2026 Wiki',
     description:
-      'Terms for using Moonlight Peaks Wiki, an independent Moonlight Peaks guide site.',
+      'Terms for using Esports Manager 2026 Wiki, an independent Esports Manager 2026 guide site.',
     locale,
     pathname: '/terms',
   });
@@ -20,28 +20,28 @@ export async function generateMetadata({
 
 export default function TermsOfServicePage() {
   return (
-    <div className="bg-[#120719] py-12 text-[#F4EAFE]">
+    <div className="bg-[#061018] py-12 text-[#EAF7FF]">
       <Container className="max-w-3xl space-y-6 px-4">
         <h1 className="font-display text-4xl font-black">Terms of Service</h1>
-        <p className="leading-8 text-[#DED2F6]">
-          This site provides independent Moonlight Peaks guides, source notes,
-          and official-link guidance. It is not affiliated with, endorsed by,
-          sponsored by, or operated by Little Chicken, XSEED Games, Marvelous
-          Europe, Valve, Steam, Nintendo, or Google Play.
+        <p className="leading-8 text-[#A8C7D8]">
+          This site provides independent Esports Manager 2026 guides, source
+          notes, and official-link guidance. It is not affiliated with, endorsed
+          by, sponsored by, or operated by Neurona Games, indie.io, Valve,
+          Steam, Discord, Reddit, X, YouTube, or EMDB.
         </p>
-        <p className="leading-8 text-[#DED2F6]">
-          Mechanics, gifts, fish lists, card details, platform requirements, and
-          patch behavior can change after game updates. Treat guide pages as
-          community-oriented guidance and verify important details in your
+        <p className="leading-8 text-[#A8C7D8]">
+          Player data, tactics, contract values, patch behavior, EMDB entries,
+          and platform support can change after game updates. Treat guide pages
+          as community-oriented guidance and verify important details in your
           current game version.
         </p>
-        <p className="leading-8 text-[#DED2F6]">
+        <p className="leading-8 text-[#A8C7D8]">
           Do not use this site to distribute unauthorized game files, unsafe
-          APKs, modified clients, save editors, copied paid files, trainers, or
-          automation scripts.
+          downloads, modified clients, copied roster databases, paid files,
+          trainers, or automation scripts.
         </p>
-        <p className="leading-8 text-[#DED2F6]">
-          Questions about these terms can be sent to hello@moonlightpeaks.org.
+        <p className="leading-8 text-[#A8C7D8]">
+          Questions about these terms can be sent to hello@esportsmanager.wiki.
         </p>
       </Container>
     </div>

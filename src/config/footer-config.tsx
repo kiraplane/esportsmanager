@@ -48,32 +48,32 @@ export function useFooterLinks(): NestedMenuItem[] {
         },
         {
           title: t('guides.items.romance'),
-          href: Routes.Romance,
+          href: Routes.ScoutingTransfers,
           external: false,
         },
         {
           title: t('guides.items.gifts'),
-          href: Routes.Gifts,
+          href: Routes.ContractsBudget,
           external: false,
         },
         {
           title: t('guides.items.farming'),
-          href: Routes.Farming,
+          href: Routes.TrainingMorale,
           external: false,
         },
         {
           title: t('guides.items.magic'),
-          href: Routes.Magic,
+          href: Routes.BestTactics,
           external: false,
         },
         {
           title: t('guides.items.nokturna'),
-          href: Routes.Nokturna,
+          href: Routes.TournamentsMajors,
           external: false,
         },
         {
           title: t('guides.items.walkthrough'),
-          href: Routes.Walkthrough,
+          href: Routes.SponsorsBrand,
           external: false,
         },
       ],
@@ -83,27 +83,27 @@ export function useFooterLinks(): NestedMenuItem[] {
       items: [
         {
           title: t('database.items.all'),
-          href: Routes.Database,
+          href: Routes.Emdb,
           external: false,
         },
         {
           title: t('database.items.characters'),
-          href: Routes.DatabaseCharacters,
+          href: Routes.CreateOrganization,
           external: false,
         },
         {
           title: t('database.items.families'),
-          href: Routes.DatabaseFamilies,
+          href: Routes.ScoutingTransfers,
           external: false,
         },
         {
           title: t('database.items.locations'),
-          href: Routes.DatabaseLocations,
+          href: Routes.ContractsBudget,
           external: false,
         },
         {
           title: t('database.items.items'),
-          href: Routes.DatabaseItems,
+          href: Routes.TrainingMorale,
           external: false,
         },
       ],
@@ -113,27 +113,27 @@ export function useFooterLinks(): NestedMenuItem[] {
       items: [
         {
           title: t('tools.items.all'),
-          href: Routes.Tools,
+          href: Routes.BestTactics,
           external: false,
         },
         {
           title: t('tools.items.platformPicker'),
-          href: Routes.ToolPlatformPicker,
+          href: Routes.TournamentsMajors,
           external: false,
         },
         {
           title: t('tools.items.romanceTracker'),
-          href: Routes.ToolRomanceTracker,
+          href: Routes.SponsorsBrand,
           external: false,
         },
         {
           title: t('tools.items.itemTracker'),
-          href: Routes.ToolItemTracker,
+          href: Routes.Review,
           external: false,
         },
         {
           title: t('tools.items.farmingCalculator'),
-          href: Routes.ToolFarmingProfitCalculator,
+          href: Routes.SteamDeck,
           external: false,
         },
       ],
@@ -153,7 +153,7 @@ export function useFooterLinks(): NestedMenuItem[] {
         },
         {
           title: t('official.items.cheats'),
-          href: Routes.Cheats,
+          href: Routes.ModsAndCheats,
           external: false,
         },
         {

@@ -1,4 +1,4 @@
-import { guides } from '@/data/moonlightpeaks/guides';
+import { guides } from '@/data/esportsmanager/guides';
 import { Routes } from '@/routes';
 import type { MetadataRoute } from 'next';
 import { routing } from '../i18n/routing';
@@ -7,29 +7,21 @@ import { getCanonicalBaseUrl } from '../lib/urls/urls';
 const coreRoutes = [
   Routes.Root,
   Routes.Guides,
+  Routes.BeginnerGuide,
+  Routes.CreateOrganization,
+  Routes.ScoutingTransfers,
+  Routes.ContractsBudget,
+  Routes.TrainingMorale,
+  Routes.BestTactics,
+  Routes.TournamentsMajors,
+  Routes.SponsorsBrand,
   Routes.ReleaseDate,
   Routes.Demo,
   Routes.Platforms,
-  Routes.Switch,
   Routes.SteamDeck,
-  Routes.Characters,
-  Routes.Database,
-  Routes.DatabaseCharacters,
-  Routes.DatabaseFamilies,
-  Routes.DatabaseLocations,
-  Routes.DatabaseItems,
-  Routes.Tools,
-  Routes.ToolPlatformPicker,
-  Routes.ToolRomanceTracker,
-  Routes.ToolItemTracker,
-  Routes.ToolFarmingProfitCalculator,
-  Routes.Romance,
-  Routes.Gifts,
-  Routes.Farming,
-  Routes.Magic,
-  Routes.Nokturna,
-  Routes.Walkthrough,
-  Routes.Cheats,
+  Routes.Emdb,
+  Routes.Review,
+  Routes.ModsAndCheats,
   Routes.Download,
   Routes.Discord,
   Routes.PrivacyPolicy,
@@ -42,7 +34,7 @@ const guideRoutes = guides
   .map((guide) => guide.path)
   .filter((path) => !coreRoutes.includes(path as Routes));
 
-const stableLastModified = new Date('2026-07-07T00:00:00.000Z');
+const stableLastModified = new Date('2026-07-08T00:00:00.000Z');
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const sitemapList: MetadataRoute.Sitemap = [];
@@ -60,8 +52,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         changeFrequency:
           route === Routes.Root ||
           route === Routes.Guides ||
-          route === Routes.Database ||
-          route === Routes.Tools ||
+          route === Routes.BestTactics ||
+          route === Routes.Emdb ||
           route === Routes.ReleaseDate ||
           route === Routes.Platforms
             ? 'daily'
@@ -70,14 +62,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           route === Routes.Root
             ? 1
             : route === Routes.Guides ||
-                route === Routes.Database ||
-                route === Routes.Tools ||
+                route === Routes.BestTactics ||
+                route === Routes.Emdb ||
                 route === Routes.Platforms ||
                 route === Routes.ReleaseDate ||
-                route === Routes.Romance ||
-                route === Routes.Farming ||
-                route === Routes.Magic ||
-                route === Routes.Walkthrough ||
+                route === Routes.BeginnerGuide ||
                 route === Routes.Download
               ? 0.9
               : 0.8,

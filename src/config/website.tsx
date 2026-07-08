@@ -20,7 +20,7 @@ export const websiteConfig: WebsiteConfig = {
   },
   metadata: {
     images: {
-      ogImage: 'https://i.ytimg.com/vi/Z_rxfOWb54I/hq720.jpg',
+      ogImage: 'https://i.ytimg.com/vi/hb_t9aD3smo/hq720.jpg',
       logoLight: '/android-chrome-192x192.png',
       logoDark: '/android-chrome-192x192.png',
     },
@@ -75,8 +75,8 @@ export const websiteConfig: WebsiteConfig = {
   },
   mail: {
     provider: 'resend',
-    fromEmail: 'Moonlight Peaks <hello@moonlightpeaks.org>',
-    supportEmail: 'hello@moonlightpeaks.org',
+    fromEmail: 'Esports Manager 2026 <hello@esportsmanager.wiki>',
+    supportEmail: 'hello@esportsmanager.wiki',
   },
   newsletter: {
     enable: false,

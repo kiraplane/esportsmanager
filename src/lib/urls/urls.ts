@@ -1,7 +1,7 @@
 import { routing } from '@/i18n/routing';
 import type { Locale } from 'next-intl';
 
-export const CANONICAL_BASE_URL = 'https://www.moonlightpeaks.org';
+export const CANONICAL_BASE_URL = 'https://www.esportsmanager.wiki';
 
 function cleanBaseUrl(url: string) {
   return url.replace(/\/$/, '');
@@ -11,7 +11,7 @@ function isLocalBaseUrl(url?: string) {
   return !url || /localhost|127\.0\.0\.1|0\.0\.0\.0/.test(url);
 }
 
-function getMoonlightPeaksBaseUrl(url?: string) {
+function getEsportsManagerBaseUrl(url?: string) {
   if (!url || isLocalBaseUrl(url)) {
     return undefined;
   }
@@ -19,11 +19,11 @@ function getMoonlightPeaksBaseUrl(url?: string) {
   try {
     const parsedUrl = new URL(url);
     if (
-      parsedUrl.hostname === 'moonlightpeaks.org' ||
-      parsedUrl.hostname === 'www.moonlightpeaks.org'
+      parsedUrl.hostname === 'esportsmanager.wiki' ||
+      parsedUrl.hostname === 'www.esportsmanager.wiki'
     ) {
       parsedUrl.protocol = 'https:';
-      parsedUrl.hostname = 'www.moonlightpeaks.org';
+      parsedUrl.hostname = 'www.esportsmanager.wiki';
       parsedUrl.port = '';
       parsedUrl.pathname = '';
       parsedUrl.search = '';
@@ -59,9 +59,9 @@ export function getBaseUrl(): string {
     process.env.NEXT_PUBLIC_BASE_URL || process.env.BETTER_AUTH_URL;
 
   // In production, never let a local or old-project .env value leak into URLs.
-  const moonlightPeaksBaseUrl = getMoonlightPeaksBaseUrl(configuredBaseUrl);
-  if (moonlightPeaksBaseUrl) {
-    return moonlightPeaksBaseUrl;
+  const esportsManagerBaseUrl = getEsportsManagerBaseUrl(configuredBaseUrl);
+  if (esportsManagerBaseUrl) {
+    return esportsManagerBaseUrl;
   }
 
   return getCanonicalBaseUrl();

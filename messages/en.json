@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "name": "Moonlight Peaks",
-    "title": "Moonlight Peaks Wiki - Guides, Romance, Platforms and Farming",
-    "description": "Moonlight Peaks wiki for beginner guides, romance, gifts, farming, magic, Nokturna, platforms, demo, Switch, Steam Deck, and safe cheats."
+    "name": "Esports Manager 2026",
+    "title": "Esports Manager 2026 Wiki - Guides, Tactics, EMDB and Steam",
+    "description": "Esports Manager 2026 wiki for beginner guides, tactics, scouting, transfers, contracts, training, sponsors, EMDB, Steam, demo, and safe links."
   },
   "Common": {
     "premium": "Premium",
@@ -54,7 +54,7 @@
   },
   "PricingPage": {
     "title": "Pricing",
-    "description": "Optional supporter plans for keeping Moonlight Peaks Wiki maintained",
+    "description": "Optional supporter plans for keeping Esports Manager 2026 Wiki maintained",
     "subtitle": "Simple support options for readers who want to help maintain current guides and hosting",
     "monthly": "Monthly",
     "yearly": "Yearly",
@@ -80,11 +80,11 @@
   "PricePlans": {
     "free": {
       "name": "Free",
-      "description": "Browse Moonlight Peaks Wiki with no payment required",
+      "description": "Browse Esports Manager 2026 Wiki with no payment required",
       "features": {
         "feature-1": "Launch, platform, demo, and official-link guidance",
-        "feature-2": "Beginner, romance, gifts, farming, magic, Nokturna, and walkthrough guides",
-        "feature-3": "Switch, Steam Deck, download, Discord, and safe cheats pages",
+        "feature-2": "Beginner, scouting, contracts, training, tactics, tournaments, and sponsor guides",
+        "feature-3": "Steam, demo, EMDB, Steam Deck, download, Discord, and safety pages",
         "feature-4": "Guide pages updated as sources change"
       },
       "limits": {
@@ -113,11 +113,11 @@
     },
     "max": {
       "name": "Backer",
-      "description": "For heavier support of Moonlight Peaks Wiki maintenance",
+      "description": "For heavier support of Esports Manager 2026 Wiki maintenance",
       "features": {
         "feature-1": "Support expanded guide coverage",
         "feature-2": "Help fund more frequent source reviews",
-        "feature-3": "Support long-form walkthrough pages",
+        "feature-3": "Support long-form guide pages",
         "feature-4": "Keep hosting and tooling stable",
         "feature-5": "Back future wiki improvements",
         "feature-6": "Useful for teams maintaining community resources",
@@ -297,22 +297,22 @@
         "title": "Platforms"
       },
       "database": {
-        "title": "Database"
+        "title": "EMDB"
       },
       "tools": {
-        "title": "Tools"
+        "title": "Tactics"
       },
       "romance": {
-        "title": "Romance"
+        "title": "Roster"
       },
       "farming": {
-        "title": "Farming"
+        "title": "Contracts"
       },
       "magic": {
-        "title": "Magic"
+        "title": "Training"
       },
       "nokturna": {
-        "title": "Nokturna"
+        "title": "Sponsors"
       },
       "download": {
         "title": "Download"
@@ -322,7 +322,7 @@
       }
     },
     "footer": {
-      "tagline": "Independent Moonlight Peaks wiki for launch setup, database, tools, platforms, romance, farming, magic, Nokturna, and safe links.",
+      "tagline": "Independent Esports Manager 2026 wiki for Steam launch setup, scouting, contracts, tactics, EMDB, demo, and safe links.",
       "start": {
         "title": "Start",
         "items": {
@@ -337,32 +337,32 @@
         "items": {
           "all": "All Guides",
           "beginner": "Beginner Guide",
-          "romance": "Romance",
-          "gifts": "Gifts",
-          "farming": "Farming",
-          "magic": "Magic",
-          "nokturna": "Nokturna",
-          "walkthrough": "Walkthrough"
+          "romance": "Scouting",
+          "gifts": "Contracts",
+          "farming": "Training",
+          "magic": "Best Tactics",
+          "nokturna": "Tournaments",
+          "walkthrough": "Sponsors"
         }
       },
       "database": {
-        "title": "Database",
+        "title": "Data",
         "items": {
-          "all": "Database Hub",
-          "characters": "Characters",
-          "families": "Families",
-          "locations": "Locations",
-          "items": "Items"
+          "all": "EMDB Guide",
+          "characters": "Create Org",
+          "families": "Scouting",
+          "locations": "Contracts",
+          "items": "Training"
         }
       },
       "tools": {
-        "title": "Tools",
+        "title": "Match Day",
         "items": {
-          "all": "Tools Hub",
-          "platformPicker": "Platform Picker",
-          "romanceTracker": "Romance Tracker",
-          "itemTracker": "Item Tracker",
-          "farmingCalculator": "Farming Calculator"
+          "all": "Best Tactics",
+          "platformPicker": "Tournaments",
+          "romanceTracker": "Sponsors",
+          "itemTracker": "Review",
+          "farmingCalculator": "Steam Deck"
         }
       },
       "official": {
@@ -371,7 +371,7 @@
           "discord": "Discord",
           "download": "Download",
           "disclaimer": "Disclaimer",
-          "cheats": "Cheats Safety"
+          "cheats": "Mods Safety"
         }
       },
       "legal": {

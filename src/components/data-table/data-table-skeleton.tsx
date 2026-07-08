@@ -30,7 +30,7 @@ export function DataTableSkeleton({
   className,
   ...props
 }: DataTableSkeletonProps) {
-  const cozyCellWidths = Array.from(
+  const skeletonCellWidths = Array.from(
     { length: columnCount },
     (_, index) => cellWidths[index % cellWidths.length] ?? "auto",
   );
@@ -61,8 +61,8 @@ export function DataTableSkeleton({
                   <TableHead
                     key={j}
                     style={{
-                      width: cozyCellWidths[j],
-                      minWidth: shrinkZero ? cozyCellWidths[j] : "auto",
+                      width: skeletonCellWidths[j],
+                      minWidth: shrinkZero ? skeletonCellWidths[j] : "auto",
                     }}
                   >
                     <Skeleton className="h-6 w-full" />
@@ -78,8 +78,8 @@ export function DataTableSkeleton({
                   <TableCell
                     key={j}
                     style={{
-                      width: cozyCellWidths[j],
-                      minWidth: shrinkZero ? cozyCellWidths[j] : "auto",
+                      width: skeletonCellWidths[j],
+                      minWidth: shrinkZero ? skeletonCellWidths[j] : "auto",
                     }}
                   >
                     <Skeleton className="h-6 w-full" />

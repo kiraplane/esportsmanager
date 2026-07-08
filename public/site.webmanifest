@@ -1,11 +1,11 @@
 {
-  "name": "Moonlight Peaks Wiki",
-  "short_name": "Peaks Wiki",
-  "description": "Moonlight Peaks wiki for beginner guides, romance, gifts, farming, magic, Nokturna, platforms, demo, Switch, Steam Deck, and safe cheats.",
+  "name": "Esports Manager 2026 Wiki",
+  "short_name": "EM2026 Wiki",
+  "description": "Esports Manager 2026 wiki for beginner guides, tactics, scouting, transfers, contracts, training, sponsors, EMDB, Steam, demo, and safe links.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#120719",
-  "theme_color": "#C77DFF",
+  "background_color": "#061018",
+  "theme_color": "#59D6FF",
   "icons": [
     {
       "src": "/favicon-32x32.png",

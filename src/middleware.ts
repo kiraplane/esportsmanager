@@ -46,77 +46,133 @@ const retiredPublicRouteRedirects: Array<{
   { pattern: /^\/updates(?:\/.*)?$/, target: '/guides' },
   { pattern: /^\/steam\/?$/, target: '/release-date' },
   { pattern: /^\/release\/?$/, target: '/release-date' },
-  { pattern: /^\/moonlight-peaks-release(?:\/.*)?$/, target: '/release-date' },
-  { pattern: /^\/moonlight-peaks-demo(?:\/.*)?$/, target: '/demo' },
-  { pattern: /^\/moonlight-peaks-platforms(?:\/.*)?$/, target: '/platforms' },
-  { pattern: /^\/moonlight-peaks-switch(?:\/.*)?$/, target: '/switch' },
-  { pattern: /^\/moonlight-peaks-switch-2(?:\/.*)?$/, target: '/switch' },
-  { pattern: /^\/moonlight-peaks-steam-deck(?:\/.*)?$/, target: '/steam-deck' },
-  { pattern: /^\/moonlight-peaks-database(?:\/.*)?$/, target: '/database' },
   {
-    pattern: /^\/moonlight-peaks-character-database(?:\/.*)?$/,
-    target: '/database/characters',
+    pattern: /^\/esports-manager-2026-release(?:\/.*)?$/,
+    target: '/release-date',
+  },
+  { pattern: /^\/esports-manager-2026-demo(?:\/.*)?$/, target: '/demo' },
+  {
+    pattern: /^\/esports-manager-2026-platforms(?:\/.*)?$/,
+    target: '/platforms',
+  },
+  { pattern: /^\/esports-manager-2026-switch(?:\/.*)?$/, target: '/platforms' },
+  {
+    pattern: /^\/esports-manager-2026-switch-2(?:\/.*)?$/,
+    target: '/platforms',
   },
   {
-    pattern: /^\/moonlight-peaks-characters-database(?:\/.*)?$/,
-    target: '/database/characters',
+    pattern: /^\/esports-manager-2026-steam-deck(?:\/.*)?$/,
+    target: '/steam-deck',
+  },
+  { pattern: /^\/esports-manager-2026-database(?:\/.*)?$/, target: '/emdb' },
+  {
+    pattern: /^\/esports-manager-2026-character-database(?:\/.*)?$/,
+    target: '/guides/scouting-transfers',
   },
   {
-    pattern: /^\/moonlight-peaks-families(?:\/.*)?$/,
-    target: '/database/families',
+    pattern: /^\/esports-manager-2026-characters-database(?:\/.*)?$/,
+    target: '/guides/scouting-transfers',
   },
   {
-    pattern: /^\/moonlight-peaks-family-database(?:\/.*)?$/,
-    target: '/database/families',
+    pattern: /^\/esports-manager-2026-families(?:\/.*)?$/,
+    target: '/guides/scouting-transfers',
   },
   {
-    pattern: /^\/moonlight-peaks-locations(?:\/.*)?$/,
-    target: '/database/locations',
+    pattern: /^\/esports-manager-2026-family-database(?:\/.*)?$/,
+    target: '/guides/scouting-transfers',
   },
   {
-    pattern: /^\/moonlight-peaks-location-database(?:\/.*)?$/,
-    target: '/database/locations',
-  },
-  { pattern: /^\/moonlight-peaks-items(?:\/.*)?$/, target: '/database/items' },
-  { pattern: /^\/moonlight-peaks-tools(?:\/.*)?$/, target: '/tools' },
-  {
-    pattern: /^\/moonlight-peaks-platform-picker(?:\/.*)?$/,
-    target: '/tools/platform-picker',
+    pattern: /^\/esports-manager-2026-locations(?:\/.*)?$/,
+    target: '/guides/tournaments-majors',
   },
   {
-    pattern: /^\/moonlight-peaks-romance-tracker(?:\/.*)?$/,
-    target: '/tools/romance-tracker',
+    pattern: /^\/esports-manager-2026-location-database(?:\/.*)?$/,
+    target: '/guides/tournaments-majors',
+  },
+  { pattern: /^\/esports-manager-2026-items(?:\/.*)?$/, target: '/emdb' },
+  {
+    pattern: /^\/esports-manager-2026-tools(?:\/.*)?$/,
+    target: '/best-tactics',
   },
   {
-    pattern: /^\/moonlight-peaks-item-tracker(?:\/.*)?$/,
-    target: '/tools/item-tracker',
+    pattern: /^\/esports-manager-2026-platform-picker(?:\/.*)?$/,
+    target: '/platforms',
   },
   {
-    pattern: /^\/moonlight-peaks-farming-calculator(?:\/.*)?$/,
-    target: '/tools/farming-profit-calculator',
+    pattern: /^\/esports-manager-2026-romance-tracker(?:\/.*)?$/,
+    target: '/guides/scouting-transfers',
   },
   {
-    pattern: /^\/moonlight-peaks-crop-calculator(?:\/.*)?$/,
-    target: '/tools/farming-profit-calculator',
+    pattern: /^\/esports-manager-2026-item-tracker(?:\/.*)?$/,
+    target: '/emdb',
   },
-  { pattern: /^\/moonlight-peaks-characters(?:\/.*)?$/, target: '/characters' },
-  { pattern: /^\/moonlight-peaks-romance(?:\/.*)?$/, target: '/romance' },
-  { pattern: /^\/moonlight-peaks-gifts(?:\/.*)?$/, target: '/gifts' },
-  { pattern: /^\/moonlight-peaks-gift-guide(?:\/.*)?$/, target: '/gifts' },
-  { pattern: /^\/moonlight-peaks-farming(?:\/.*)?$/, target: '/farming' },
-  { pattern: /^\/moonlight-peaks-magic(?:\/.*)?$/, target: '/magic' },
-  { pattern: /^\/moonlight-peaks-nokturna(?:\/.*)?$/, target: '/nokturna' },
-  { pattern: /^\/download-moonlight-peaks\/?$/, target: '/download' },
-  { pattern: /^\/moonlight-peaks-download\/?$/, target: '/download' },
-  { pattern: /^\/moonlight-peaks-apk\/?$/, target: '/download' },
+  {
+    pattern: /^\/esports-manager-2026-farming-calculator(?:\/.*)?$/,
+    target: '/guides/contracts-budget',
+  },
+  {
+    pattern: /^\/esports-manager-2026-crop-calculator(?:\/.*)?$/,
+    target: '/guides/contracts-budget',
+  },
+  {
+    pattern: /^\/esports-manager-2026-characters(?:\/.*)?$/,
+    target: '/guides/scouting-transfers',
+  },
+  {
+    pattern: /^\/esports-manager-2026-romance(?:\/.*)?$/,
+    target: '/guides/scouting-transfers',
+  },
+  {
+    pattern: /^\/esports-manager-2026-gifts(?:\/.*)?$/,
+    target: '/guides/contracts-budget',
+  },
+  {
+    pattern: /^\/esports-manager-2026-gift-guide(?:\/.*)?$/,
+    target: '/guides/contracts-budget',
+  },
+  {
+    pattern: /^\/esports-manager-2026-farming(?:\/.*)?$/,
+    target: '/guides/training-morale',
+  },
+  {
+    pattern: /^\/esports-manager-2026-magic(?:\/.*)?$/,
+    target: '/best-tactics',
+  },
+  {
+    pattern: /^\/esports-manager-2026-nokturna(?:\/.*)?$/,
+    target: '/guides/tournaments-majors',
+  },
+  { pattern: /^\/download-esports-manager-2026\/?$/, target: '/download' },
+  { pattern: /^\/esports-manager-2026-download\/?$/, target: '/download' },
+  { pattern: /^\/esports-manager-2026-apk\/?$/, target: '/download' },
   { pattern: /^\/android-download\/?$/, target: '/download' },
-  { pattern: /^\/moonlight-peaks-mobile\/?$/, target: '/platforms' },
-  { pattern: /^\/moonlight-peaks-cheats(?:\/.*)?$/, target: '/cheats' },
-  { pattern: /^\/moonlight-peaks-codes(?:\/.*)?$/, target: '/cheats' },
-  { pattern: /^\/moonlight-peaks-discord\/?$/, target: '/discord' },
-  { pattern: /^\/moonlight-peaks-steam\/?$/, target: '/release-date' },
-  { pattern: /^\/moonlight-peaks-cards\/?$/, target: '/nokturna' },
-  { pattern: /^\/moonlight-peaks-walkthrough\/?$/, target: '/walkthrough' },
+  { pattern: /^\/esports-manager-2026-mobile\/?$/, target: '/platforms' },
+  {
+    pattern: /^\/esports-manager-2026-cheats(?:\/.*)?$/,
+    target: '/mods-and-cheats',
+  },
+  {
+    pattern: /^\/esports-manager-2026-codes(?:\/.*)?$/,
+    target: '/mods-and-cheats',
+  },
+  { pattern: /^\/esports-manager-2026-discord\/?$/, target: '/discord' },
+  { pattern: /^\/esports-manager-2026-steam\/?$/, target: '/release-date' },
+  {
+    pattern: /^\/esports-manager-2026-cards\/?$/,
+    target: '/guides/tournaments-majors',
+  },
+  {
+    pattern: /^\/esports-manager-2026-walkthrough\/?$/,
+    target: '/guides/beginner-guide',
+  },
+  {
+    pattern: /^\/esports-manager-2026-tactics(?:\/.*)?$/,
+    target: '/best-tactics',
+  },
+  {
+    pattern: /^\/esports-manager-2026-tips(?:\/.*)?$/,
+    target: '/guides/beginner-guide',
+  },
 ];
 
 export default async function middleware(req: NextRequest) {
@@ -125,10 +181,10 @@ export default async function middleware(req: NextRequest) {
   const hostname = hostHeader?.split(':')[0].toLowerCase();
   const forwardedProto = req.headers.get('x-forwarded-proto');
   const productionHosts = new Set([
-    'moonlightpeaks.org',
-    'www.moonlightpeaks.org',
+    'esportsmanager.wiki',
+    'www.esportsmanager.wiki',
   ]);
-  const canonicalHost = 'www.moonlightpeaks.org';
+  const canonicalHost = 'www.esportsmanager.wiki';
 
   if (
     hostname &&

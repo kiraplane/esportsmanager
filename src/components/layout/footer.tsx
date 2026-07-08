@@ -17,7 +17,7 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
   return (
     <footer
       className={cn(
-        'border-[#4B6B66] border-t bg-[#111915] text-[#F3EDE1]',
+        'border-[#1F3A4A] border-t bg-[#061018] text-[#EAF7FF]',
         className
       )}
     >
@@ -48,7 +48,7 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={link.title}
-                      className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#4B6B66] text-[#CDEAE7] hover:border-[#FFB68A] hover:bg-[#261339] hover:text-[#F3EDE1]"
+                      className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#1F3A4A] text-[#A8C7D8] hover:border-[#59D6FF] hover:bg-[#0E1B27] hover:text-[#EAF7FF]"
                     >
                       <span className="sr-only">{link.title}</span>
                       {link.icon ? link.icon : null}
@@ -123,7 +123,7 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
         </div>
       </Container>
 
-      <div className="border-[#4B6B66] border-t py-8">
+      <div className="border-[#1F3A4A] border-t py-8">
         <Container className="px-4 flex items-center justify-between gap-x-4">
           <span className="text-muted-foreground text-sm">
             &copy; {new Date().getFullYear()} {t('Metadata.name')} All Rights
@@ -131,8 +131,9 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
           </span>
 
           <span className="text-muted-foreground text-sm">
-            Independent Moonlight Peaks guide site. Not affiliated with Little
-            Chicken, XSEED, Marvelous, Steam, Nintendo, or Google Play.
+            Independent Esports Manager 2026 guide site. Not affiliated with
+            Neurona Games, indie.io, Valve, Steam, Discord, Reddit, X, YouTube,
+            or EMDB.
           </span>
         </Container>
       </div>
