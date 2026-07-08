@@ -209,3 +209,48 @@ GitHub 仓库：`esportsmanager`
 - GA：在 GA-GTM 项目中使用授权创建媒体资源，回填环境变量
 
 如第三方 CLI 未登录或凭据不可用，记录 blocker，不伪造完成状态。
+
+## 9. Launch Record
+
+执行日期：2026-07-08
+
+GitHub:
+
+- Repository: https://github.com/kiraplane/esportsmanager
+- Branch: `main`
+- Latest pushed commit after launch config: `eb24731475dd7b8c2cd6417cbd1c25247bf6e14e`
+
+Cloudflare:
+
+- Worker: `esportsmanager`
+- Worker URL: https://esportsmanager.zhh0504.workers.dev
+- Custom domains:
+  - https://esportsmanager.wiki -> 301 to `www`
+  - https://www.esportsmanager.wiki -> 200
+- Current deployed version observed after GA update: `9a2251ad-3129-4211-a416-95f3e9f18edf`
+
+GA4:
+
+- Account: `kiraplane`
+- Property: `esportsmanager.wiki`
+- Property ID: `544629595`
+- Web stream: `https://www.esportsmanager.wiki`
+- Measurement ID: `G-K1ZMLJRCGE`
+- Updated in `wrangler.jsonc`, `.env`, `env.example`, and GA-GTM `analytics-sites.json`
+
+Validation:
+
+- `pnpm lint`: passed
+- `pnpm exec tsc --noEmit`: passed
+- `pnpm build`: passed
+- `wrangler deploy`: deployed successfully; one run returned a transient Wrangler `fetch failed` after upload, but `wrangler deployments list` and live page checks confirmed the final version.
+- Live checks:
+  - `/`: 200, canonical `https://www.esportsmanager.wiki`, GA `G-K1ZMLJRCGE`
+  - `/best-tactics`: 200
+  - `/emdb`: 200
+  - `/mods-and-cheats`: 200
+  - `/esports-manager-2026-cheats`: 308 to `/mods-and-cheats`
+
+Remaining external action:
+
+- Cloudflare GitHub automatic builds were not connected in this run. `wrangler` does not expose a build-connection command for this Worker setup, and the browser automation surface was unavailable, so connecting the Cloudflare GitHub App remains a dashboard/OAuth approval step.
