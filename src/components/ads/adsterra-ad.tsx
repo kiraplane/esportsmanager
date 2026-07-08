@@ -77,18 +77,16 @@ export function AdsterraAdStack({ className }: { className?: string }) {
     'banner-300x250',
     'banner-468x60',
   ];
-  const enabledSlots = slots.filter((slot) => getAdsterraSlot(slot).enabled);
+  const enabledSlot = slots.find((slot) => getAdsterraSlot(slot).enabled);
 
-  if (enabledSlots.length === 0) {
+  if (!enabledSlot) {
     return null;
   }
 
   return (
     <aside className={cn('space-y-8', className)} aria-label="Advertisement">
       <div className="text-center text-xs text-[#59D6FF]">Advertisement</div>
-      {enabledSlots.map((slot) => (
-        <AdsterraAdFrame key={slot} slot={slot} />
-      ))}
+      <AdsterraAdFrame slot={enabledSlot} />
     </aside>
   );
 }

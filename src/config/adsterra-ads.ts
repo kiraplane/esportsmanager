@@ -96,7 +96,7 @@ function readEnv(name: string) {
 }
 
 export function isAdsterraEnabled() {
-  return readEnv('ADSTERRA_ADS_ENABLED') === 'true';
+  return readEnv('ADSTERRA_ADS_ENABLED').toLowerCase() === 'true';
 }
 
 export function getAdsterraSlot(id: AdsterraSlotId): AdsterraSlotConfig {
@@ -138,7 +138,7 @@ export function getAdsterraDisplayScriptBaseUrl() {
 export function getAdsterraNativeScriptBaseUrl() {
   return (
     readEnv('ADSTERRA_NATIVE_SCRIPT_BASE_URL') ||
-    'https://pl29699182.effectivecpmnetwork.com'
+    'https://pl30258415.effectivecpmnetwork.com'
   ).replace(/\/+$/, '');
 }
 

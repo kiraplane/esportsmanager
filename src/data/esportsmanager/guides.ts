@@ -1143,12 +1143,99 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    slug: 'first-season-no-tutorial-guide',
+    path: '/guides/first-season-no-tutorial-guide',
+    title: 'First Season No-Tutorial Guide',
+    seoTitle:
+      'Esports Manager 2026 First Season Guide - No Tutorial Route',
+    seoDescription:
+      'Play the first Esports Manager 2026 season without getting lost: organization setup, staff, contracts, scouting, morale, tactics, and tournament pacing.',
+    summary:
+      'A practical first-season checklist for players who bounced off the missing tutorial: stabilize money, hire only essential staff, scout role gaps, and enter tournaments with one clear goal.',
+    category: 'Start',
+    difficulty: 'Beginner',
+    coverImageUrl: videos.gameplay.thumbnailUrl,
+    publishedAt: '2026-07-08',
+    updatedAt: checkedAt,
+    sourceStrategy: 'community_crosscheck',
+    videoSearchQueries: [
+      'esports manager 2026 no tutorial',
+      'esports manager 2026 first season guide',
+      'esports manager 2026 beginner tips',
+    ],
+    sourceNotes:
+      'Created after Steam community discussions surfaced no-tutorial and first-save confusion. Uses official Steam feature descriptions and current gameplay videos as cross-checks.',
+    video: videos.gameplay,
+    tags: ['First Season', 'No Tutorial', 'Checklist'],
+    relatedRoutes: [
+      '/guides/beginner-guide',
+      '/guides/create-organization',
+      '/guides/contracts-budget',
+      '/guides/scouting-transfers',
+      '/guides/best-tactics',
+    ],
+    body: [
+      {
+        heading: 'Pause before the first calendar day moves',
+        paragraphs: [
+          'If the game feels like it dropped you into menus without enough tutorial, slow the save down before spending money. Your first season should start with an audit, not a transfer spree. Check roster roles, wage commitments, staff gaps, sponsor expectations, training load, and the first tournament dates.',
+          'The goal is to find one obvious bottleneck. A missing coach, no analyst, an unbalanced roster, or an impossible sponsor target will hurt more than not signing a star player immediately.',
+        ],
+        bullets: [
+          'Open finances before sending offers.',
+          'Check roster roles before scouting names.',
+          'Hire essential staff before luxury specialists.',
+          'Pick one early tournament goal: learning, sponsor target, or prize money.',
+        ],
+      },
+      {
+        heading: 'Use a three-budget rule',
+        paragraphs: [
+          'Keep money in three buckets: wages, operations, and mistakes. Wages keep the roster legal. Operations pay staff, training, and travel. Mistakes are the cash you leave untouched because first saves always reveal something you did not expect.',
+          'If one signing empties the mistake bucket, skip it. A first season with flexibility is easier to repair than a glamorous roster that cannot afford support.',
+        ],
+      },
+      {
+        heading: 'Scout roles, not famous names',
+        paragraphs: [
+          'The Steam page emphasizes organization management, legal and financial responsibility, and realistic depth. That means scouting should answer role problems. Do you need a stable entry player, a better support, a bench prospect, or a cheaper contract?',
+          'Create a shortlist by role, wage, age, and fit. Only after that should you compare headline talent. This keeps the first season from becoming a shopping screen.',
+        ],
+      },
+      {
+        heading: 'Treat tactics as tests',
+        paragraphs: [
+          'Do not search for one universal tactic before you understand your roster. Run a balanced plan, review match output, then adjust one lever at a time. If you change practice, roles, aggression, and roster at once, you will not know what fixed the problem.',
+          'After every match, write one sentence: why did we lose rounds, money, or morale? That sentence tells you which guide to open next.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'What should I do first if there is no tutorial?',
+        answer:
+          'Audit finances, roster roles, staff gaps, sponsors, training, and calendar before signing anyone.',
+      },
+      {
+        question: 'Should I enter every early tournament?',
+        answer:
+          'No. Enter events that match your budget, morale, and sponsor goals. Some early events are better used as learning tests.',
+      },
+      {
+        question: 'What is the safest first-season mistake to avoid?',
+        answer:
+          'Do not spend your entire budget on one player before hiring basic staff and checking wage runway.',
+      },
+    ],
+  },
 ];
 
 export const featuredGuides = guides.filter((guide) =>
   [
     'beginner-guide',
     'create-organization',
+    'first-season-no-tutorial-guide',
     'scouting-transfers',
     'contracts-budget',
     'training-morale',
