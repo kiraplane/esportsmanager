@@ -885,6 +885,32 @@ export const guides: Guide[] = [
           'This site will not mirror database files. The safer pattern is to send players to EMDB and official Discord support instead of hosting stale or untrusted exports.',
         ],
       },
+      {
+        heading: 'Filter the database by the decision you are making',
+        paragraphs: [
+          'Do not browse the whole database as one long transfer list. Start with the object you need to change, then narrow the result before comparing individual records.',
+          'Player and team searches belong to roster planning. Staff searches belong to training, analysis, and support gaps. Sponsor records belong to budget and objective planning. Keeping those jobs separate makes community data easier to audit before an export.',
+        ],
+        bullets: [
+          'Players: filter by team, position or role, age, nationality, contract status, and the stat that solves the roster gap.',
+          'Teams: compare region, competition, active roster, organization identity, and whether the record is current for your save.',
+          'Staff: separate analysts, coaches, media staff, and other support roles before judging cost or fit.',
+          'Sponsors: check objective type, duration, expected income, and whether the target distorts your tournament calendar.',
+        ],
+      },
+      {
+        heading: 'Validate records before importing or contributing',
+        paragraphs: [
+          'Community databases can be more current than a shipped roster, but they can also contain duplicates, stale contracts, missing staff, or sponsor assumptions. Compare the record with the game version and the date of the edit before treating it as save-ready.',
+          'For a contribution, change one record group at a time and write down the reason. For an import, keep the original export beside the edited file so a bad roster, team, staff, or sponsor change can be rolled back without rebuilding the save.',
+        ],
+        bullets: [
+          'Check player-to-team membership and contract status together.',
+          'Check team identity before importing logos, images, or organization data.',
+          'Check staff roles against the jobs available in the current build.',
+          'Treat sponsor values as version-sensitive and review them after patches.',
+        ],
+      },
     ],
     faq: [
       {
