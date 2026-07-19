@@ -1,6 +1,6 @@
 import type { Guide, GuideVideo } from './types';
 
-const checkedAt = '2026-07-17';
+const checkedAt = '2026-07-19';
 
 function youtubeThumbnail(id: string) {
   return `https://i.ytimg.com/vi/${id}/hq720.jpg`;
