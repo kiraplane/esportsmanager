@@ -156,10 +156,10 @@ const coreModules = [
 ] as const;
 
 const homeTrailer = {
-  title: 'Esports Manager 2026 official trailer',
-  embedUrl: 'https://www.youtube-nocookie.com/embed/hb_t9aD3smo?rel=0&hl=en',
-  watchUrl: 'https://www.youtube.com/watch?v=hb_t9aD3smo',
-  thumbnailUrl: 'https://i.ytimg.com/vi/hb_t9aD3smo/hq720.jpg',
+  title: 'Esports Manager 2026 launch trailer',
+  embedUrl: 'https://www.youtube-nocookie.com/embed/gxlDTRtBvOk?rel=0&hl=en',
+  watchUrl: 'https://www.youtube.com/watch?v=gxlDTRtBvOk',
+  thumbnailUrl: 'https://i.ytimg.com/vi/gxlDTRtBvOk/hq720.jpg',
 };
 
 export function EsportsManagerHomePage({ locale }: { locale?: Locale }) {
@@ -215,7 +215,7 @@ export function EsportsManagerHomePage({ locale }: { locale?: Locale }) {
         name: homeTrailer.title,
         thumbnailUrl: homeTrailer.thumbnailUrl,
         embedUrl: homeTrailer.embedUrl,
-        uploadDate: '2026-03-01',
+        uploadDate: '2026-07-06',
       },
     ],
   };

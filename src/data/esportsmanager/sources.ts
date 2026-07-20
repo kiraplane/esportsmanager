@@ -1,6 +1,6 @@
 import type { DataSource, GameFact, KeywordMatrixItem } from './types';
 
-export const checkedAt = '2026-07-19';
+export const checkedAt = '2026-07-20';
 
 export const siteFacts = {
   siteName: 'Esports Manager 2026',
@@ -18,8 +18,8 @@ export const siteFacts = {
   officialYouTubeUrl: 'https://www.youtube.com/@esportsmanager4805',
   emdbUrl: 'https://emdb.gg/',
   supportEmail: 'hello@esportsmanager.wiki',
-  officialCoverImage: 'https://i.ytimg.com/vi/hb_t9aD3smo/hq720.jpg',
-  officialHeroImage: 'https://i.ytimg.com/vi/hb_t9aD3smo/hq720.jpg',
+  officialCoverImage: 'https://i.ytimg.com/vi/gxlDTRtBvOk/hq720.jpg',
+  officialHeroImage: 'https://i.ytimg.com/vi/gxlDTRtBvOk/hq720.jpg',
   officialScreenshot: 'https://i.ytimg.com/vi/78ovz89_zaQ/hq720.jpg',
   genre: 'Esports strategy and management simulation',
   releaseSnapshot:
@@ -107,11 +107,11 @@ export const sourceList: DataSource[] = [
   },
   {
     type: 'youtube',
-    label: 'Official Indie Fan Fest trailer',
-    url: 'https://www.youtube.com/watch?v=hb_t9aD3smo',
+    label: 'Official launch trailer',
+    url: 'https://www.youtube.com/watch?v=gxlDTRtBvOk',
     checkedAt,
     confidence: 'high',
-    note: 'Selected as homepage trust video and official visual source.',
+    note: 'Current launch-cycle trailer from publisher indie.io, selected as the homepage trust video and visual source.',
   },
   {
     type: 'youtube',
