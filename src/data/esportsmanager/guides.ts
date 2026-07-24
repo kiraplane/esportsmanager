@@ -1,6 +1,6 @@
 import type { Guide, GuideVideo } from './types';
 
-const checkedAt = '2026-07-21';
+const checkedAt = '2026-07-24';
 
 function youtubeThumbnail(id: string) {
   return `https://i.ytimg.com/vi/${id}/hq720.jpg`;
@@ -1173,8 +1173,7 @@ export const guides: Guide[] = [
     slug: 'first-season-no-tutorial-guide',
     path: '/guides/first-season-no-tutorial-guide',
     title: 'First Season No-Tutorial Guide',
-    seoTitle:
-      'Esports Manager 2026 First Season Guide - No Tutorial Route',
+    seoTitle: 'Esports Manager 2026 First Season Guide - No Tutorial Route',
     seoDescription:
       'Play the first Esports Manager 2026 season without getting lost: organization setup, staff, contracts, scouting, morale, tactics, and tournament pacing.',
     summary:
@@ -1252,6 +1251,85 @@ export const guides: Guide[] = [
         question: 'What is the safest first-season mistake to avoid?',
         answer:
           'Do not spend your entire budget on one player before hiring basic staff and checking wage runway.',
+      },
+    ],
+  },
+  {
+    slug: 'patch-1-0-4',
+    path: '/guides/patch-1-0-4',
+    title: 'Esports Manager 2026 Patch 1.0.4',
+    seoTitle: 'Esports Manager 2026 1.0.4 - Balance & Save Changes',
+    seoDescription:
+      'See how patch 1.0.4 changes map balance, IGL value, player growth, transfers, staff, databases, sponsors and save backups.',
+    summary:
+      'Patch 1.0.4 changes the decisions behind a whole career: roles and map practice matter more, player development is dynamic, transfer AI is stricter and saves gain automatic recovery points.',
+    category: 'Community',
+    difficulty: 'Status',
+    coverImageUrl: 'https://i.ytimg.com/vi/gxlDTRtBvOk/hq720.jpg',
+    publishedAt: '2026-07-24',
+    updatedAt: '2026-07-24',
+    sourceStrategy: 'official',
+    videoSearchQueries: [
+      'Esports Manager 2026 patch 1.0.4',
+      'Esports Manager 2026 IGL leadership',
+      'Esports Manager 2026 save backup',
+    ],
+    sourceNotes:
+      'Summarized from the official July 22 Patch 1.0.4 notes. The developer identifies this as the likely last patch before the larger August update.',
+    tags: ['1.0.4', 'Balance', 'Save backup'],
+    relatedRoutes: [
+      '/guides/best-tactics',
+      '/guides/scouting-transfers',
+      '/guides/training-morale',
+      '/guides/contracts-budget',
+    ],
+    body: [
+      {
+        heading: 'Re-evaluate tactics and IGL value',
+        paragraphs: [
+          'Version 1.0.4 reworks T/CT side balance on every map, reduces comeback chance and increases the influence of player attributes. IGL leadership and map practice now have a much stronger impact on team performance.',
+          'Do not preserve a launch-week tactic simply because it once won. Compare map practice, IGL quality and side-specific results over several matches before changing the whole roster.',
+        ],
+      },
+      {
+        heading: 'Player development now moves both directions',
+        paragraphs: [
+          'AI players can grow or decline over time. Younger players are more likely to improve, older players can lose form and training produces faster attribute growth. Hand-authored potential can now appear as stars on the player profile.',
+          'Use age, potential and current role together. A cheap prospect with room to grow can be better career value than an older name whose form and resale value are already falling.',
+        ],
+      },
+      {
+        heading: 'Transfers and staff are less exploitable',
+        paragraphs: [
+          'Transfer value now considers form and season impact. Weak clubs should stop bidding beyond their level, academies focus on younger players, free-agent youngsters should find teams and loan interest is more active.',
+          'AI clubs also hire available staff monthly instead of silently creating every specialist. Review the market at regular intervals and make staff offers before a needed specialist disappears.',
+        ],
+      },
+      {
+        heading: 'Use the new save backups',
+        paragraphs: [
+          'The game now creates both the previous save and a start-of-month backup, and it can offer recovery when the current save fails to load. The first post-update launch may take longer while old files migrate.',
+          'Let migration finish, then confirm the career opens before forcing the process closed. The patch cannot guarantee recovery of files already corrupted by earlier operating-system problems, so keep external backups for important long careers.',
+        ],
+      },
+      {
+        heading: 'Database and sponsor planning changed',
+        paragraphs: [
+          'The update adds EQX, Trident Esports and 25 free agents, while updating existing player details. Sponsor Top 3 goals become Top 4 goals, and Major invitations now consider Top 32 teams with a complete roster.',
+          'Recheck custom database assumptions and sponsor plans after updating. A roster or financial route based on the old club pool may no longer be the most efficient choice.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Does IGL leadership matter more after 1.0.4?',
+        answer:
+          'Yes. The official notes say IGL leadership and map practice have a much stronger performance impact.',
+      },
+      {
+        question: 'Does the game now back up saves automatically?',
+        answer:
+          'Yes. It keeps the previous save and a start-of-month backup for recovery.',
       },
     ],
   },
