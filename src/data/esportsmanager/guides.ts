@@ -1,6 +1,6 @@
 import type { Guide, GuideVideo } from './types';
 
-const checkedAt = '2026-07-29';
+const checkedAt = '2026-07-31';
 
 function youtubeThumbnail(id: string) {
   return `https://i.ytimg.com/vi/${id}/hq720.jpg`;
@@ -55,6 +55,88 @@ const videos = {
 } satisfies Record<string, GuideVideo>;
 
 export const guides: Guide[] = [
+  {
+    slug: 'patch-1-0-5-2-loans-retired-staff',
+    path: '/guides/patch-1-0-5-2-loans-retired-staff',
+    title: 'Esports Manager 2026 Patch 1.0.5.2',
+    seoTitle: 'Esports Manager 1.0.5.2 - Loans & Retired Staff',
+    seoDescription:
+      'See how Esports Manager 1.0.5.2 changes loans, transfer screens, retired players becoming staff, women’s teams and current career planning.',
+    summary:
+      'Patch 1.0.5.2 makes loans easier to understand and fixes several career states, while opening a new staff pipeline through retired coaches and analysts.',
+    category: 'Community',
+    difficulty: 'Status',
+    coverImageUrl: 'https://i.ytimg.com/vi/gxlDTRtBvOk/hq720.jpg',
+    publishedAt: '2026-07-31',
+    updatedAt: '2026-07-31',
+    sourceStrategy: 'official',
+    videoSearchQueries: [
+      'Esports Manager 2026 patch 1.0.5.2',
+      'Esports Manager 2026 loan system',
+      'Esports Manager 2026 coaches analysts',
+    ],
+    sourceNotes:
+      'Summarized from the official July 29 Patch 1.0.5.2 notes. Exact player and club availability still depends on the active database and save date.',
+    tags: ['1.0.5.2', 'Loans', 'Retired staff'],
+    relatedRoutes: [
+      '/guides/scouting-transfers',
+      '/guides/contracts-budget',
+      '/guides/training-morale',
+      '/guides/emdb-database-editor',
+    ],
+    body: [
+      {
+        heading: 'Retired players can become coaches or analysts',
+        paragraphs: [
+          'Version 1.0.5.2 allows retiring players to move into coach or analyst roles, with profile links and photos preserved. That creates a longer career loop for experienced players instead of removing all of their value at retirement.',
+          'Check the available staff market after each retirement window before hiring a generic replacement. Favor role fit and staff attributes over reputation alone, then compare the candidate with the specialist your roster actually lacks.',
+        ],
+      },
+      {
+        heading: 'Use the unified three-to-eighteen-month loan window',
+        paragraphs: [
+          'Loan duration is now handled consistently from three to eighteen months. The patch also repairs older saves, counters, messages and borrower selection so the transfer should be easier to track.',
+          'Choose a term that covers the player’s development goal without hiding a roster gap for too long. Before accepting, check the borrowing club’s level, likely playing time, wages and the date the player returns.',
+        ],
+        bullets: [
+          'Use short loans for a specific development or roster window.',
+          'Use longer loans only when playing time is credible.',
+          'Record the return date before committing replacement wages.',
+        ],
+      },
+      {
+        heading: 'Transfer screens now expose loan status',
+        paragraphs: [
+          'The transfer interface now shows current loans and return dates, and upcoming transfers are easier to identify. The patch also fixes cases where a player could be sold or loaned through an unintended third club.',
+          'Recheck every planned outgoing transfer after updating an older save. A player who appeared permanently unavailable may now have a visible return date or repaired ownership state.',
+        ],
+      },
+      {
+        heading: 'Database and women’s-team fixes matter for new careers',
+        paragraphs: [
+          'Male personnel should no longer be assigned by AI to women’s teams, the database editor gains a Female option and IPL is added. These changes are most visible when starting or regenerating a database.',
+          'Keep an existing career if it remains healthy, but review staff and team assignments after migration. Start a test save with the current database before replacing a long-running career solely to gain one corrected competition or field.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Can retired players become staff after patch 1.0.5.2?',
+        answer:
+          'Yes. Retiring players can become coaches or analysts in the updated career system.',
+      },
+      {
+        question: 'How long can a loan last?',
+        answer:
+          'The official notes describe a unified loan duration from three to eighteen months.',
+      },
+      {
+        question: 'Do old saves receive the loan fixes?',
+        answer:
+          'The patch includes repair work for old-save loan states, but you should still keep a backup before migration.',
+      },
+    ],
+  },
   {
     slug: 'beginner-guide',
     path: '/guides/beginner-guide',
