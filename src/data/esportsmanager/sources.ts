@@ -1,6 +1,6 @@
 import type { DataSource, GameFact, KeywordMatrixItem } from './types';
 
-export const checkedAt = '2026-08-22';
+export const checkedAt = '2026-08-24';
 
 export const siteFacts = {
   siteName: 'Esports Manager 2026',
@@ -57,6 +57,14 @@ export const gameFacts: GameFact[] = [
 ];
 
 export const sourceList: DataSource[] = [
+  {
+    type: 'official',
+    label: 'Esports Manager Major August Update',
+    url: 'https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228670143',
+    checkedAt,
+    confidence: 'high',
+    note: 'Official August 21 source for Cache, Steam Workshop image/tactic/database sets, EMDB one-click publishing and the expanded club academy.',
+  },
   {
     type: 'official',
     label: 'Steam store page',

@@ -1,6 +1,6 @@
 import type { Guide, GuideVideo } from './types';
 
-const checkedAt = '2026-08-22';
+const checkedAt = '2026-08-24';
 
 function youtubeThumbnail(id: string) {
   return `https://i.ytimg.com/vi/${id}/hq720.jpg`;
@@ -55,6 +55,75 @@ const videos = {
 } satisfies Record<string, GuideVideo>;
 
 export const guides: Guide[] = [
+  {
+    slug: 'steam-workshop-cache-academy-guide',
+    path: '/guides/steam-workshop-cache-academy-guide',
+    title: 'Esports Manager Steam Workshop and Academy Guide',
+    seoTitle: 'Esports Manager Workshop - EMDB, Tactics, Cache, Academy',
+    seoDescription:
+      'Use Esports Manager Steam Workshop for databases, tactics and images, activate one EMDB world, prepare Cache and run the club academy.',
+    summary:
+      'The Major August Update adds Steam Workshop, Cache and a controllable academy, changing how a new career should choose data, tactics and youth development.',
+    category: 'Database',
+    difficulty: 'Intermediate',
+    coverImageUrl: 'https://i.ytimg.com/vi/hb_t9aD3smo/hq720.jpg',
+    publishedAt: '2026-08-24',
+    updatedAt: '2026-08-24',
+    sourceStrategy: 'official',
+    videoSearchQueries: [
+      'Esports Manager 2026 Steam Workshop',
+      'Esports Manager Cache academy EMDB',
+    ],
+    sourceNotes:
+      'Built from the official August 21 Major August Update. Workshop database contents remain community data and should be checked before a long career.',
+    tags: ['Steam Workshop', 'EMDB', 'Academy'],
+    relatedRoutes: [
+      '/guides/emdb',
+      '/guides/best-tactics',
+      '/guides/scouting-transfers',
+      '/guides/create-organization',
+    ],
+    body: [
+      {
+        heading: 'Choose the career database before the first save',
+        paragraphs: [
+          'Workshop supports Images, Tactics and Databases. Only one Workshop database remains active at a time, so select and verify the database before starting a career rather than swapping worlds after roster decisions have begun.',
+          'EMDB.gg databases are detected automatically and can be uploaded in one click. Check the season, roster scope, ratings philosophy and update date because Workshop delivery does not make community data official.',
+        ],
+      },
+      {
+        heading: 'Separate tactics from database changes',
+        paragraphs: [
+          'Subscribe to tactics independently from the world database. Test one setup in friendly or low-risk matches, record the map and roster roles, then compare it with the existing system under the same conditions.',
+          'Cache now ships with default tactics. Use them as a starting reference, then adapt utility, roles and buy priorities to the current players instead of importing a tactic unchanged.',
+        ],
+      },
+      {
+        heading: 'Run the academy as a roster pipeline',
+        paragraphs: [
+          'The academy now accepts permanent and loan signings up to age 23, and youth players can be promoted from the squad screen. Define the position and development target before signing a prospect.',
+          'Do not fill the academy because slots exist. Compare wage or loan cost, expected playing time, promotion path and the senior roster contract calendar so a useful prospect has somewhere to go.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'How many Workshop databases can be active?',
+        answer:
+          'The official update says only one Workshop database stays active at a time.',
+      },
+      {
+        question: 'Can EMDB databases be uploaded to Workshop?',
+        answer:
+          'Yes. Databases built on EMDB.gg can be detected and uploaded through the new Workshop flow.',
+      },
+      {
+        question: 'What is the academy age limit?',
+        answer:
+          'The Major August Update allows permanent or loan academy signings up to age 23.',
+      },
+    ],
+  },
   {
     slug: 'patch-1-0-5-2-loans-retired-staff',
     path: '/guides/patch-1-0-5-2-loans-retired-staff',
